@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>NutriLens</title>
+  <meta name="description" content="Snap a photo of your food and get its nutrition, explained simply.">
+  <meta name="theme-color" content="#f6f3ec" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0f1412" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="NutriLens">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="format-detection" content="telephone=no">
+  <script src="theme.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Shared SVG icons -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-scan" viewBox="0 0 24 24"><path d="M3 8V5a2 2 0 0 1 2-2h3M16 3h3a2 2 0 0 1 2 2v3M21 16v3a2 2 0 0 1-2 2h-3M8 21H5a2 2 0 0 1-2-2v-3"/><circle cx="12" cy="12" r="4"/></symbol>
+    <symbol id="i-today" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-9-9v9z"/><path d="M15 3.5A9 9 0 0 1 20.5 9H15z"/></symbol>
+    <symbol id="i-history" viewBox="0 0 24 24"><path d="M5 20V12M10 20V6M15 20v-9M20 20V9"/></symbol>
+    <symbol id="i-goals" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></symbol>
+    <symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13.5" r="3.5"/></symbol>
+    <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 15V4M7 9l5-5 5 5M4 15v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9zM19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 11a8 8 0 1 0-2.3 5.7M20 4v7h-7"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></symbol>
+    <symbol id="i-auto" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v18a9 9 0 0 0 0-18z" fill="currentColor"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 8v5M12 16.5v.5"/><circle cx="12" cy="12" r="9"/></symbol>
+  </svg>
+
+  <div class="app">
+    <!-- Desktop sidebar -->
+    <aside class="sidebar">
+      <div class="brand"><span class="logo">🥗</span><span>NutriLens</span><span class="ai-badge">AI</span></div>
+      <nav class="side-nav" aria-label="Main">
+        <button class="tab active" data-tab="scan"><svg><use href="#i-scan"/></svg>Scan meal</button>
+        <button class="tab" data-tab="today"><svg><use href="#i-today"/></svg>Today</button>
+        <button class="tab" data-tab="history"><svg><use href="#i-history"/></svg>History</button>
+        <button class="tab" data-tab="goals"><svg><use href="#i-goals"/></svg>Goals</button>
+      </nav>
+      <div class="sidebar-foot">
+        <div class="usage-card">
+          <div class="usage-title">AI usage</div>
+          <div class="usage-row"><span>This month</span><b id="u-month">–</b></div>
+          <div class="meter"><div id="u-month-bar"></div></div>
+          <div class="usage-row"><span>Scans today</span><b id="u-today">–</b></div>
+          <div class="meter"><div id="u-today-bar"></div></div>
+          <p class="usage-note">Spending stops automatically at your limits.</p>
+        </div>
+        <div class="theme-switch" role="radiogroup" aria-label="Theme">
+          <button type="button" data-theme-set="light" role="radio" title="Light"><svg><use href="#i-sun"/></svg></button>
+          <button type="button" data-theme-set="auto" role="radio" title="Match system"><svg><use href="#i-auto"/></svg></button>
+          <button type="button" data-theme-set="dark" role="radio" title="Dark"><svg><use href="#i-moon"/></svg></button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Mobile / tablet header -->
+    <header class="mobile-header">
+      <div class="brand"><span class="logo">🥗</span><span>NutriLens</span><span class="ai-badge">AI</span></div>
+      <div class="header-actions">
+        <div id="usage-chip" class="usage-chip" title="AI spending this month">–</div>
+        <button type="button" id="theme-cycle" class="icon-btn" aria-label="Change theme"><svg><use href="#i-auto"/></svg></button>
+      </div>
+    </header>
+
+    <main class="content">
+      <!-- SCAN -->
+      <section id="tab-scan" class="panel active">
+        <div class="page-head">
+          <div>
+            <p class="greeting" id="greeting">Hello</p>
+            <h1>What’s on your plate?</h1>
+            <p class="lede">Snap a photo. The AI tells you what it is, what’s inside, and whether it’s good for you.</p>
+          </div>
+          <button id="new-scan" class="btn" type="button" hidden><svg><use href="#i-plus"/></svg> New scan</button>
+        </div>
+
+        <div class="scan-layout" id="scan-layout" data-state="idle">
+          <div class="scan-left">
+            <div class="card capture">
+              <div id="dropzone" class="dropzone">
+                <img id="preview" alt="Your meal photo" hidden>
+                <button id="change-photo" class="change-photo" type="button" hidden>
+                  <svg><use href="#i-refresh"/></svg> Change photo
+                </button>
+                <div id="drop-hint" class="drop-hint">
+                  <div class="drop-icon"><svg><use href="#i-camera"/></svg></div>
+                  <strong>Add a photo of your food</strong>
+                  <span class="desktop-only">Drag & drop, paste, or choose a file</span>
+                  <span class="touch-only">Use your camera or pick from your gallery</span>
+                </div>
+              </div>
+              <div class="pick-row">
+                <label class="btn touch-only">
+                  <input id="file-camera" type="file" accept="image/*" capture="environment" hidden>
+                  <svg><use href="#i-camera"/></svg> Take photo
+                </label>
+                <label class="btn">
+                  <input id="file-upload" type="file" accept="image/*" hidden>
+                  <svg><use href="#i-upload"/></svg> <span class="touch-only">Gallery</span><span class="desktop-only">Choose photo</span>
+                </label>
+              </div>
+              <label class="field">
+                <span>Add a note <small>(optional, helps accuracy)</small></span>
+                <input id="note" type="text" maxlength="200" placeholder="e.g. cooked in ghee, half portion, brown rice">
+              </label>
+              <button id="analyze" class="btn primary block lg" disabled><svg><use href="#i-spark"/></svg> Analyze with AI</button>
+              <p id="scan-error" class="error" hidden></p>
+            </div>
+            <div class="card tips-card desktop-only">
+              <h3>For the best results</h3>
+              <ul>
+                <li>Shoot from above, with the whole plate in frame</li>
+                <li>Use good light, no flash glare</li>
+                <li>Keep a spoon or fork in view for size</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Short "at a glance" review, beside the full report -->
+          <aside id="review" class="review" aria-label="Quick review"></aside>
+
+          <div class="scan-right">
+            <div id="loading" class="card loading" hidden>
+              <div class="loading-photo"><img id="loading-img" alt=""><div class="scanline"></div></div>
+              <ol class="steps" id="steps">
+                <li>Looking at your photo</li>
+                <li>Identifying each food</li>
+                <li>Estimating portions</li>
+                <li>Calculating nutrition</li>
+              </ol>
+            </div>
+
+            <article id="result" class="card result" hidden></article>
+
+            <div id="how" class="card how">
+              <h3>How it works</h3>
+              <ol>
+                <li><span class="how-n">1</span><div><b>Take a photo</b><small>Snap your plate from above, in good light.</small></div></li>
+                <li><span class="how-n">2</span><div><b>AI identifies the food</b><small>It recognises each item and estimates the portion.</small></div></li>
+                <li><span class="how-n">3</span><div><b>Get a quick review</b><small>A health score, a one-line verdict and how often to eat it.</small></div></li>
+                <li><span class="how-n">4</span><div><b>See every detail & log it</b><small>Calories, protein, sugar and salt explained simply, tracked against your goals.</small></div></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TODAY -->
+      <section id="tab-today" class="panel">
+        <div class="page-head">
+          <div>
+            <p class="greeting" id="today-date"></p>
+            <h1>Today</h1>
+          </div>
+          <button class="btn primary" type="button" data-goto="scan"><svg><use href="#i-plus"/></svg> Add meal</button>
+        </div>
+        <div class="today-layout">
+          <div class="card summary-card" id="today-summary"></div>
+          <div class="today-side">
+            <div class="card coach">
+              <div class="card-head">
+                <h2><svg><use href="#i-spark"/></svg> AI Coach</h2>
+                <button id="insight-btn" class="btn small">Get advice</button>
+              </div>
+              <div id="insight" class="insight muted">Get quick feedback on your day so far and a tip for your next meal.</div>
+            </div>
+            <div class="card">
+              <div class="card-head"><h2>Meals</h2></div>
+              <div id="today-meals"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- HISTORY -->
+      <section id="tab-history" class="panel">
+        <div class="page-head">
+          <div>
+            <p class="greeting">Last 14 days</p>
+            <h1>History</h1>
+          </div>
+        </div>
+        <div id="history-stats" class="stats"></div>
+        <div class="card">
+          <div class="card-head"><h2>Calories per day</h2></div>
+          <div id="history-chart" class="chart"></div>
+          <div class="chart-legend">
+            <span><i class="sw on"></i>Near goal</span><span><i class="sw under"></i>Under</span><span><i class="sw over"></i>Over</span><span><i class="sw line"></i>Goal</span>
+          </div>
+        </div>
+        <div class="card"><div class="card-head"><h2>Logged days</h2></div><div id="history-list"></div></div>
+      </section>
+
+      <!-- GOALS -->
+      <section id="tab-goals" class="panel">
+        <div class="page-head">
+          <div>
+            <p class="greeting">Your targets</p>
+            <h1>Daily goals</h1>
+            <p class="lede">Every number in the app is compared with these. Not sure? The defaults suit most adults.</p>
+          </div>
+        </div>
+        <form id="goals-form" class="card">
+          <div class="goals-grid" id="goals-fields"></div>
+          <div class="form-actions">
+            <button class="btn primary" type="submit">Save goals</button>
+            <button class="btn" type="button" id="goals-reset">Reset to defaults</button>
+          </div>
+        </form>
+        <p class="disclaimer">Nutrition values are AI estimates from a photo and can be off by 20% or more. Use them as a guide, not as medical advice.</p>
+      </section>
+    </main>
+
+    <!-- Mobile / tablet bottom navigation -->
+    <nav class="bottom-nav" aria-label="Main">
+      <button class="tab active" data-tab="scan"><svg><use href="#i-scan"/></svg><span>Scan</span></button>
+      <button class="tab" data-tab="today"><svg><use href="#i-today"/></svg><span>Today</span></button>
+      <button class="fab" id="fab-camera" type="button" aria-label="Take a photo of your meal"><span class="fab-btn"><svg><use href="#i-camera"/></svg></span></button>
+      <button class="tab" data-tab="history"><svg><use href="#i-history"/></svg><span>History</span></button>
+      <button class="tab" data-tab="goals"><svg><use href="#i-goals"/></svg><span>Goals</span></button>
+    </nav>
+  </div>
+
+  <!-- Shown only when the app is opened from another device in phone-access mode -->
+  <div id="pin-screen" class="pin-screen" hidden>
+    <form id="pin-form" class="card pin-card" aria-labelledby="pin-title">
+      <div class="brand"><span class="logo">🥗</span><span>NutriLens</span><span class="ai-badge">AI</span></div>
+      <h1 id="pin-title">Enter your PIN</h1>
+      <p class="lede">This keeps your AI credits safe from others on your Wi-Fi. You only need to do this once on this device.</p>
+      <label class="field">
+        <span>PIN</span>
+        <input id="pin-input" type="password" autocomplete="current-password" required>
+      </label>
+      <button class="btn primary block lg" type="submit"><svg><use href="#i-check"/></svg> Unlock</button>
+      <p id="pin-error" class="error" role="alert" hidden></p>
+    </form>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="app.js" type="module"></script>
+</body>
+</html>
