@@ -6,7 +6,8 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-export const DATA_DIR = path.join(root, 'data');
+// DATA_DIR lets you point the app at another folder (e.g. a demo copy); default is ./data.
+export const DATA_DIR = process.env.DATA_DIR ? path.resolve(process.env.DATA_DIR) : path.join(root, 'data');
 export const IMAGE_DIR = path.join(DATA_DIR, 'images');
 fs.mkdirSync(IMAGE_DIR, { recursive: true });
 
