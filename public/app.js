@@ -53,7 +53,7 @@ async function api(path, opts = {}) {
     headers: { 'Content-Type': 'application/json', ...(opts.headers ?? {}) },
     body: opts.body ? JSON.stringify(opts.body) : undefined,
   });
-  // Phone-access mode: another device must unlock with the PIN first, then we retry.
+  // Not logged in on this device yet: ask for the access code, then retry.
   if (res.status === 401) {
     await unlock();
     return api(path, opts);
@@ -64,7 +64,7 @@ async function api(path, opts = {}) {
   return data;
 }
 
-// One PIN prompt shared by every request that hit a 401 at the same time.
+// One login prompt shared by every request that hit a 401 at the same time.
 let unlocking = null;
 function unlock() {
   unlocking ??= new Promise((resolve) => {
@@ -88,7 +88,7 @@ function unlock() {
         unlocking = null;
         resolve();
       } catch (err) {
-        error.textContent = err instanceof TypeError ? 'Can’t reach NutriLens. Is the computer on and on the same Wi-Fi?' : err.message;
+        error.textContent = err instanceof TypeError ? 'Can’t reach NutriLens. Check your internet connection and try again.' : err.message;
         error.hidden = false;
         input.select();
       } finally {
@@ -109,6 +109,14 @@ function toast(msg) {
 
 // ---------- Usage (sidebar on desktop, chip on mobile) ----------
 function renderUsage(u) {
+  document.body.dataset.engine = u.engine ?? 'grok';
+  if (u.engine === 'local') {
+    $('#usage-chip').textContent = 'Free AI';
+    $('#usage-chip').title = `Free food-recognition model on this server: ${u.dishes} trained dishes, ${fmt(u.foods)} foods`;
+    $('.usage-card').innerHTML = `<div class="usage-title">AI model</div>
+      <p class="usage-note"><b>Free</b> · runs on this server. Recognises ${u.dishes} trained dishes and matches ${fmt(u.foods)} foods by name.</p>`;
+    return;
+  }
   const monthPct = Math.min((u.month_cost_usd / u.monthly_budget_usd) * 100, 100);
   const todayPct = Math.min((u.today_calls / u.daily_limit) * 100, 100);
   $('#usage-chip').textContent = `AI $${u.month_cost_usd.toFixed(2)} / $${u.monthly_budget_usd.toFixed(0)}`;
@@ -253,6 +261,29 @@ function scaled(totals, s) {
   return Object.fromEntries(Object.entries(totals).map(([k, v]) => [k, v * s]));
 }
 
+// ---------- Data source labels (USDA lab data vs AI estimate) ----------
+const fdcLink = (src) => `https://fdc.nal.usda.gov/food-details/${encodeURIComponent(src.fdc_id)}/nutrients`;
+function sourceBadge(it) {
+  if (!it.source) return '<span class="src ai" title="No matching food in the database, so the AI estimated these numbers">✨ AI estimate</span>';
+  const src = it.source.dataset === 'INDB' ? 'INDB' : 'USDA';
+  const href = it.source.url ?? fdcLink(it.source);
+  return it.source.approx
+    ? `<a class="src approx" href="${esc(href)}" target="_blank" rel="noopener noreferrer" title="No exact entry for this dish: nutrition of a similar food is used">≈ Similar: ${esc(it.source.description)}</a>`
+    : `<a class="src usda" href="${esc(href)}" target="_blank" rel="noopener noreferrer" title="Open this food in its dataset">🧪 ${src}: ${esc(it.source.description)}</a>`;
+}
+function sourceSummary(a) {
+  const ds = a.data_sources;
+  if (!ds || !ds.total) return null;
+  if (a.engine === 'local') {
+    return ds.approximate
+      ? { cls: 'good', text: `🧪 Nutrition from datasets · ≈ ${ds.approximate} similar ${ds.approximate === 1 ? 'dish' : 'dishes'}` }
+      : { cls: 'good', text: '🧪 Nutrition from USDA / INDB lab data' };
+  }
+  if (ds.matched === ds.total) return { cls: 'good', text: `🧪 Nutrition from USDA lab data` };
+  if (ds.matched === 0) return { cls: '', text: '✨ Nutrition estimated by AI' };
+  return { cls: 'good', text: `🧪 USDA lab data for ${ds.matched} of ${ds.total} items` };
+}
+
 // ---------- Plain-language helpers (shared by Scan and Today) ----------
 
 // What each score band means, in words a beginner understands.
@@ -296,6 +327,67 @@ const CONFIDENCE_INFO = {
   medium: 'The dish is clear, but the portion size or recipe is a best guess.',
   low: 'The AI isn’t sure what this food is. Add a note to help it.',
 };
+const CONFIDENCE_LOCAL = {
+  high: 'The model is confident about this dish.',
+  medium: 'Fairly sure, but check the suggestions in case it’s a similar dish.',
+  low: 'Not sure. Pick the right food from the suggestions, or search for it.',
+};
+
+// ---------- Corrections: pick another dish, add or remove foods (free, local engine) ----------
+const partsOf = (a) => a.items.map((it) => ({ food_id: it.source?.id, grams: it.estimated_grams, approx: Boolean(it.source?.approx), name: it.name }));
+async function compose(body) {
+  const prev = current.analysis;
+  try {
+    const { analysis } = await api('/api/compose', { method: 'POST', body });
+    analysis.alternatives = (prev.alternatives ?? []).filter((x) => x.choice !== body.choice);
+    current = { ...current, analysis, servings: 1, cached: false };
+    renderResult();
+    setPane('result');
+  } catch (err) { toast(err.message); }
+}
+function alternativesHtml(a, limit = 7) {
+  if (a.engine !== 'local' || !a.alternatives?.length) return '';
+  return `<div class="alts"><span class="alts-label">Not right? It might be:</span>
+    <div class="alt-chips">${a.alternatives.slice(0, limit).map((x) => `<button type="button" class="alt-chip" data-choice="${esc(x.choice)}">${esc(x.name)}${x.probability ? ` <small>${x.probability}%</small>` : ''}</button>`).join('')}
+    <button type="button" class="alt-chip search" data-open-search>🔍 Search…</button></div></div>`;
+}
+function bindCorrections(root) {
+  root.querySelectorAll('[data-choice]').forEach((b) => b.addEventListener('click', () => compose({ choice: b.dataset.choice })));
+  root.querySelectorAll('[data-open-search]').forEach((b) => b.addEventListener('click', () => {
+    const input = $('#food-search');
+    if (!input) return;
+    scrollToEl(input);
+    setTimeout(() => input.focus(), 350);
+  }));
+}
+let searchTimer;
+function bindFoodEditor() {
+  const a = current.analysis;
+  $$('#result [data-remove]').forEach((b) => b.addEventListener('click', () => {
+    const parts = partsOf(a).filter((_, i) => i !== Number(b.dataset.remove));
+    compose({ parts, title: a.meal_name, cuisine: a.cuisine });
+  }));
+  const input = $('#food-search');
+  if (!input) return;
+  input.addEventListener('input', () => {
+    clearTimeout(searchTimer);
+    searchTimer = setTimeout(async () => {
+      const q = input.value.trim();
+      const box = $('#food-results');
+      if (q.length < 2) { box.innerHTML = ''; return; }
+      const { results } = await api(`/api/foods/search?q=${encodeURIComponent(q)}`);
+      box.innerHTML = results.length ? results.map((r, i) => `<div class="food-row">
+          <div><b>${esc(r.name)}</b><div class="sub">${r.dataset === 'INDB' ? 'INDB' : 'USDA'} · ${fmt(r.kcal_per_100g)} kcal / 100 g${r.serving_g ? ` · serving ${fmt(r.serving_g)} g` : ''}</div></div>
+          <div class="food-row-actions"><button type="button" class="btn small" data-add="${i}">Add</button><button type="button" class="btn small primary" data-use="${i}">Use</button></div>
+        </div>`).join('') : '<p class="sub">No foods found. Try a simpler word, like “rice” or “dal”.</p>';
+      box.querySelectorAll('[data-add]').forEach((b) => b.addEventListener('click', () => {
+        const r = results[Number(b.dataset.add)];
+        compose({ parts: [...partsOf(a), { food_id: r.id, grams: r.serving_g || 100 }], title: a.meal_name, cuisine: a.cuisine });
+      }));
+      box.querySelectorAll('[data-use]').forEach((b) => b.addEventListener('click', () => compose({ choice: `food:${results[Number(b.dataset.use)].id}` })));
+    }, 250);
+  });
+}
 
 function scoreScale(score) {
   const band = scoreBand(score);
@@ -341,10 +433,14 @@ function renderResult() {
     <div>
       <div class="chips">
         ${a.cuisine ? `<span class="chip">🌍 ${esc(a.cuisine)}</span>` : ''}
+        ${sourceSummary(a) ? `<span class="chip ${sourceSummary(a).cls}">${sourceSummary(a).text}</span>` : ''}
         ${current.cached ? '<span class="chip good">⚡ Saved result · no AI cost</span>' : ''}
+        ${a.nutri_score ? `<span class="chip">Nutri-Score ${esc(a.nutri_score.grade)}</span>` : ''}
         ${a.diet_tags.map((d) => `<span class="chip good">${esc(d)}</span>`).join('')}
       </div>
     </div>
+
+    ${alternativesHtml(a)}
 
     <section id="sec-score" class="block verdict ${band.cls}">
       <div class="verdict-head">
@@ -352,7 +448,7 @@ function renderResult() {
         <div>
           <div class="eyebrow">Health score</div>
           <div class="verdict-label">${band.label}</div>
-          <p class="hint">How nutritious this meal is, from 1 (least healthy) to 10 (most healthy). ${esc(band.note)}</p>
+          <p class="hint">How nutritious this meal is, from 1 (least healthy) to 10 (most healthy). ${esc(band.note)}${a.nutri_score ? ` Based on the Nutri-Score method (grade ${esc(a.nutri_score.grade)}), adjusted for the portion, frying, salt and sugar.` : ''}</p>
         </div>
       </div>
       ${scoreScale(a.health_score)}
@@ -415,32 +511,39 @@ function renderResult() {
 
     <section id="sec-plate" class="block">
       <h3>🥄 What’s on your plate</h3>
-      <div class="plate">${a.items.map((it) => `
+      <div class="plate">${a.items.map((it, i) => `
         <div class="plate-item">
-          <div><b>${esc(it.name)}</b><div class="sub">${esc(it.portion)}${it.estimated_grams ? ` · about ${fmt(it.estimated_grams * s)} g` : ''}</div></div>
+          <div><b>${esc(it.name)}</b><div class="sub">${esc(it.portion)}${it.estimated_grams ? ` · about ${fmt(it.estimated_grams * s)} g` : ''}</div>${a.data_sources ? sourceBadge(it) : ''}</div>
           <span class="amount">${fmt(it.calories * s)} kcal</span>
+          ${a.engine === 'local' && a.items.length > 1 ? `<button type="button" class="btn ghost icon" data-remove="${i}" aria-label="Remove ${esc(it.name)}"><svg><use href="#i-x"/></svg></button>` : ''}
         </div>`).join('')}</div>
+      ${a.engine === 'local' ? `<div class="food-editor">
+        <label class="field"><span>Add a food, or find the right one <small>(free)</small></span>
+          <input id="food-search" type="search" autocomplete="off" placeholder="e.g. dal, chapati, salad, cola"></label>
+        <div id="food-results" class="food-results"></div>
+      </div>` : ''}
       <details class="expert">
         <summary>📊 Full numbers for each item (for experts)</summary>
         <div class="table-wrap"><table>
-          <thead><tr><th>Item</th><th>g</th><th>kcal</th><th>Protein</th><th>Carbs</th><th>Fat</th><th>Sat. fat</th><th>Fiber</th><th>Sugar</th><th>Sodium</th><th>Chol.</th></tr></thead>
+          <thead><tr><th>Item</th><th>g</th><th>kcal</th><th>Protein</th><th>Carbs</th><th>Fat</th><th>Sat. fat</th><th>Fiber</th><th>Sugar</th><th>Sodium</th><th>Chol.</th><th>Source</th></tr></thead>
           <tbody>${a.items.map((it) => `<tr>
             <td>${esc(it.name)}</td><td>${fmt(it.estimated_grams * s)}</td><td>${fmt(it.calories * s)}</td>
             <td>${fmt(it.protein_g * s, 1)}</td><td>${fmt(it.carbs_g * s, 1)}</td><td>${fmt(it.fat_g * s, 1)}</td>
             <td>${fmt(it.saturated_fat_g * s, 1)}</td><td>${fmt(it.fiber_g * s, 1)}</td><td>${fmt(it.sugar_g * s, 1)}</td>
-            <td>${fmt(it.sodium_mg * s)}</td><td>${fmt(it.cholesterol_mg * s)}</td></tr>`).join('')}
+            <td>${fmt(it.sodium_mg * s)}</td><td>${fmt(it.cholesterol_mg * s)}</td>
+            <td class="src-cell">${it.source ? `<a href="${fdcLink(it.source)}" target="_blank" rel="noopener noreferrer">USDA ${esc(it.source.dataset)} #${esc(it.source.fdc_id)}</a>` : 'AI estimate'}</td></tr>`).join('')}
             <tr class="total"><td>Total</td><td>${fmt(a.items.reduce((n, it) => n + it.estimated_grams, 0) * s)}</td><td>${fmt(t.calories)}</td>
             <td>${fmt(t.protein_g, 1)}</td><td>${fmt(t.carbs_g, 1)}</td><td>${fmt(t.fat_g, 1)}</td><td>${fmt(t.saturated_fat_g, 1)}</td>
-            <td>${fmt(t.fiber_g, 1)}</td><td>${fmt(t.sugar_g, 1)}</td><td>${fmt(t.sodium_mg)}</td><td>${fmt(t.cholesterol_mg)}</td></tr>
+            <td>${fmt(t.fiber_g, 1)}</td><td>${fmt(t.sugar_g, 1)}</td><td>${fmt(t.sodium_mg)}</td><td>${fmt(t.cholesterol_mg)}</td><td></td></tr>
           </tbody>
         </table></div>
-        <p class="sub">Grams (g) except sodium and cholesterol in milligrams (mg). 1 g fat = 9 kcal, 1 g protein or carbs = 4 kcal.</p>
+        <p class="sub">Grams (g) except sodium and cholesterol in milligrams (mg). USDA values are per-100 g lab measurements scaled to the estimated grams.</p>
       </details>
     </section>
 
     ${a.micronutrients.length ? `<section id="sec-vitamins" class="block">
       <h3>💊 Vitamins & minerals</h3>
-      <p class="hint">Small nutrients your body needs every day. “% daily” shows how much of a day’s need this meal covers.</p>
+      <p class="hint">Small nutrients your body needs every day. “% daily” shows how much of a day’s need this meal covers.${a.micronutrients_source === 'usda' ? ' Calculated from USDA lab data.' : ''}</p>
       ${a.micronutrients.map((m) => `<div class="plate-item">
         <div><b>${esc(m.name)}</b>${m.benefit ? `<div class="sub">${esc(m.benefit)}</div>` : ''}</div>
         <span class="amount">${esc(m.amount)}${m.daily_value_percent ? `<br><small>${fmt(m.daily_value_percent * s)}% daily</small>` : ''}</span>
@@ -460,17 +563,27 @@ function renderResult() {
 
     <section id="sec-accuracy" class="block accuracy">
       <h3>🎯 How accurate is this?</h3>
-      <div class="nutrient-top"><b>AI confidence</b><span class="level ${{ high: 'great', medium: 'meh', low: 'bad' }[a.confidence]}">${esc(a.confidence)}</span></div>
-      <p class="hint">${CONFIDENCE_INFO[a.confidence]}</p>
-      ${a.visual_observations ? `<h4>What the AI saw</h4><p>${esc(a.visual_observations)}</p>` : ''}
-      ${a.assumptions?.length ? `<h4>What the AI assumed</h4><ul>${list(a.assumptions)}</ul>` : ''}
+      <div class="nutrient-top"><b>${a.engine === 'local' ? 'Match confidence' : 'AI confidence'}</b><span class="level ${{ high: 'great', medium: 'meh', low: 'bad' }[a.confidence]}">${esc(a.confidence)}</span></div>
+      <p class="hint">${(a.engine === 'local' ? CONFIDENCE_LOCAL : CONFIDENCE_INFO)[a.confidence]}</p>
+      ${a.engine === 'local' ? `<h4>Where the numbers come from</h4>
+      <p>An open-source food-recognition model, trained on free food-photo datasets, names the dish. Its nutrition comes from
+        <b>USDA FoodData Central</b> and the <b>Indian Nutrient Databank</b> (lab and recipe data), for a typical serving${a.data_sources?.approximate
+          ? `. ${a.data_sources.approximate} item${a.data_sources.approximate === 1 ? ' has' : 's have'} no exact entry, so a similar food is used (marked ≈)` : ''}.
+        The health score uses the Nutri-Score method. Portion size is usually the biggest source of error.</p>` : a.data_sources ? `<h4>Where the numbers come from</h4>
+      <p>The AI recognises each food and estimates its weight from the photo. The nutrition values then come from
+        <b>USDA FoodData Central</b>, the U.S. government’s lab-measured food database${a.data_sources.matched < a.data_sources.total
+          ? `. ${a.data_sources.total - a.data_sources.matched} item${a.data_sources.total - a.data_sources.matched === 1 ? ' has' : 's have'} no close match there, so ${a.data_sources.total - a.data_sources.matched === 1 ? 'its numbers are' : 'their numbers are'} AI estimates`
+          : ''}. The portion size is usually the biggest source of error.</p>` : ''}
+      ${a.visual_observations ? `<h4>${a.engine === 'local' ? 'What the model recognised' : 'What the AI saw'}</h4><p>${esc(a.visual_observations)}</p>` : ''}
+      ${a.assumptions?.length ? `<h4>${a.engine === 'local' ? 'Assumptions' : 'What the AI assumed'}</h4><ul>${list(a.assumptions)}</ul>` : ''}
       ${a.calories_corrected ? '<p class="hint">✔ We double-checked the calorie math against protein, carbs and fat, and corrected it.</p>' : ''}
       <h4>Something wrong?</h4>
-      <div class="fix-form">
+      ${a.engine === 'local' ? `<p class="sub">Pick one of the suggestions at the top, or search for the right food in “What’s on your plate”. Changes are free and instant.</p>
+      <button type="button" class="btn small" data-open-search>🔍 Search foods</button>` : `<div class="fix-form">
         <input id="fix-note" type="text" maxlength="200" placeholder="e.g. “this is brown rice”, “no butter”, “large bowl”">
         <button type="button" id="fix-btn" class="btn">Re-analyze</button>
       </div>
-      <p class="sub">Tell the AI what to fix. Re-analyzing uses one AI scan.</p>
+      <p class="sub">Tell the AI what to fix. Re-analyzing uses one AI scan.</p>`}
     </section>
 
     <div class="log-bar">
@@ -497,8 +610,10 @@ function renderResult() {
     $('#note').value = note;
     analyze();
   };
-  $('#fix-btn').addEventListener('click', fix);
-  $('#fix-note').addEventListener('keydown', (e) => { if (e.key === 'Enter') fix(); });
+  $('#fix-btn')?.addEventListener('click', fix);
+  $('#fix-note')?.addEventListener('keydown', (e) => { if (e.key === 'Enter') fix(); });
+  bindCorrections($('#result'));
+  bindFoodEditor();
   $('#log-btn').addEventListener('click', logMeal);
   buildReportNav();
   renderReview();
@@ -581,6 +696,7 @@ function renderReview() {
         <div><b>${fmt(t.carbs_g)}g</b><span>carbs</span></div>
         <div><b>${fmt(t.fat_g)}g</b><span>fat</span></div>
       </div>
+      ${sourceSummary(a) ? `<p class="source-note">${sourceSummary(a).text}${a.engine === 'local' ? ' · typical serving' : a.data_sources.matched ? ' · portions estimated by AI' : ''}</p>` : ''}
       ${pros.length || cons.length ? `<ul class="flags">
         ${pros.map((x) => `<li class="pro"><svg><use href="#i-check"/></svg><span>${esc(x)}</span></li>`).join('')}
         ${cons.map((x) => `<li class="con"><svg><use href="#i-alert"/></svg><span>${esc(x)}</span></li>`).join('')}
@@ -588,8 +704,10 @@ function renderReview() {
       ${a.best_for ? `<div class="best-for">⭐ Best for: ${esc(a.best_for)}</div>` : ''}
       ${a.overall_review ? `<div class="overall"><h4>Overall review</h4><p class="clamp">${esc(a.overall_review)}</p>
         <button type="button" class="read-more" aria-expanded="false">Read more</button></div>` : ''}
+      ${alternativesHtml(a, 3)}
     </div>
   </div>`;
+  bindCorrections(box);
   // On laptops the review text is trimmed to 3 lines so the card fits on screen.
   const more = box.querySelector('.read-more');
   more?.addEventListener('click', () => {

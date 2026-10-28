@@ -6,3 +6,7 @@
 node_modules/
 data/
 *.log
+
+# ML: downloaded datasets and model files (large; re-downloadable)
+.cache/
+models/

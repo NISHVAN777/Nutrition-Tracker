@@ -1,0 +1,7774 @@
+[
+ {
+  "key": "aaloo soyabean",
+  "name": "Aaloo soyabean",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC164",
+    "food": "Soyabean curry",
+    "dataset": "INDB",
+    "grams": 200,
+    "approx": false,
+    "kcal_per_100g": 163,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "aamras",
+  "name": "Aamras",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709242",
+    "food": "Mango, raw",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": true,
+    "kcal_per_100g": 60,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "achar",
+  "name": "Achar",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:OSR052",
+    "food": "Garlic pickle (Lahasun ka achar)",
+    "dataset": "INDB",
+    "grams": 15,
+    "approx": false,
+    "kcal_per_100g": 414,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "adhirasam",
+  "name": "Adhirasam",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708062",
+    "food": "Doughnut, NFS",
+    "dataset": "FNDDS",
+    "grams": 50,
+    "approx": true,
+    "kcal_per_100g": 426,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "aloo bhujiya",
+  "name": "Aloo bhujiya",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708213",
+    "food": "Snack mix",
+    "dataset": "FNDDS",
+    "grams": 30,
+    "approx": true,
+    "kcal_per_100g": 504,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "aloo gobi",
+  "name": "Aloo gobi",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC171",
+    "food": "Potato cauliflower (Aloo gobhi)",
+    "dataset": "INDB",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 106,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "aloo matar",
+  "name": "Aloo matar",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC190",
+    "food": "Pea potato curry (Aloo matar)",
+    "dataset": "INDB",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 101,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "aloo methi",
+  "name": "Aloo methi",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC175",
+    "food": "Potato fenugreek (Aloo methi)",
+    "dataset": "INDB",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 135,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "aloo paratha",
+  "name": "Aloo paratha",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC098",
+    "food": "Potato parantha/paratha (Aloo ka parantha/paratha)",
+    "dataset": "INDB",
+    "grams": 100,
+    "approx": false,
+    "kcal_per_100g": 205,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "aloo puri",
+  "name": "Aloo puri",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707714",
+    "food": "Bread, puri",
+    "dataset": "FNDDS",
+    "grams": 70,
+    "approx": false,
+    "kcal_per_100g": 409,
+    "serving_desc": null
+   },
+   {
+    "food_id": "indb:ASC178",
+    "food": "Dry potato (Sookhe aloo)",
+    "dataset": "INDB",
+    "grams": 150,
+    "approx": true,
+    "kcal_per_100g": 103,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "aloo shimla mirch",
+  "name": "Aloo shimla mirch",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC172",
+    "food": "Potato capsicum (Shimla mirch aloo)",
+    "dataset": "INDB",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 126,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "aloo tikki",
+  "name": "Aloo tikki",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709510",
+    "food": "Potato patty",
+    "dataset": "FNDDS",
+    "grams": 100,
+    "approx": false,
+    "kcal_per_100g": 171,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "alsi ke laddu",
+  "name": "Alsi ke laddu",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC344",
+    "food": "Sesame ladoo (Til ke ladoo)",
+    "dataset": "INDB",
+    "grams": 30,
+    "approx": true,
+    "kcal_per_100g": 397,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "amritsari kulcha",
+  "name": "Amritsari kulcha",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707715",
+    "food": "Bread, paratha",
+    "dataset": "FNDDS",
+    "grams": 100,
+    "approx": true,
+    "kcal_per_100g": 326,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "anarsa",
+  "name": "Anarsa",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708062",
+    "food": "Doughnut, NFS",
+    "dataset": "FNDDS",
+    "grams": 40,
+    "approx": true,
+    "kcal_per_100g": 426,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "anda curry",
+  "name": "Anda curry",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:BFP240",
+    "food": "Egg curry (Anda curry)",
+    "dataset": "INDB",
+    "grams": 200,
+    "approx": false,
+    "kcal_per_100g": 118,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "appam",
+  "name": "Appam",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:BFP153",
+    "food": "Appam",
+    "dataset": "INDB",
+    "grams": 120,
+    "approx": false,
+    "kcal_per_100g": 268,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "apple",
+  "name": "Apple",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709215",
+    "food": "Apple, raw",
+    "dataset": "FNDDS",
+    "grams": 180,
+    "approx": false,
+    "kcal_per_100g": 61,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "apple pie",
+  "name": "Apple pie",
+  "cuisine": "American",
+  "sources": [
+   "food101",
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707995",
+    "food": "Pie, apple",
+    "dataset": "FNDDS",
+    "grams": 125,
+    "approx": false,
+    "kcal_per_100g": 296,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "ariselu",
+  "name": "Ariselu",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708062",
+    "food": "Doughnut, NFS",
+    "dataset": "FNDDS",
+    "grams": 40,
+    "approx": true,
+    "kcal_per_100g": 426,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "baby back ribs",
+  "name": "Baby back ribs",
+  "cuisine": "American",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2705894",
+    "food": "Pork, ribs",
+    "dataset": "FNDDS",
+    "grams": 200,
+    "approx": false,
+    "kcal_per_100g": 254,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "bagels",
+  "name": "Bagels",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707684",
+    "food": "Bagel",
+    "dataset": "FNDDS",
+    "grams": 105,
+    "approx": false,
+    "kcal_per_100g": 264,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "baingan bharta",
+  "name": "Baingan bharta",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC177",
+    "food": "Brinjal bhartha (Baingan ka bhartha)",
+    "dataset": "INDB",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 65,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "baklava",
+  "name": "Baklava",
+  "cuisine": "Greek",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708044",
+    "food": "Baklava",
+    "dataset": "FNDDS",
+    "grams": 60,
+    "approx": false,
+    "kcal_per_100g": 440,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "balushahi",
+  "name": "Balushahi",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708062",
+    "food": "Doughnut, NFS",
+    "dataset": "FNDDS",
+    "grams": 50,
+    "approx": true,
+    "kcal_per_100g": 426,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "banana",
+  "name": "Banana",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709224",
+    "food": "Banana, raw",
+    "dataset": "FNDDS",
+    "grams": 120,
+    "approx": false,
+    "kcal_per_100g": 97,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "banana chips",
+  "name": "Banana chips",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709200",
+    "food": "Banana chips",
+    "dataset": "FNDDS",
+    "grams": 30,
+    "approx": false,
+    "kcal_per_100g": 519,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "bandar laddu",
+  "name": "Bandar laddu",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2710351",
+    "food": "Ladoo, round ball",
+    "dataset": "FNDDS",
+    "grams": 40,
+    "approx": true,
+    "kcal_per_100g": 411,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "banh beo",
+  "name": "Banh beo",
+  "cuisine": "Vietnamese",
+  "sources": [
+   "vietnamese"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708356",
+    "food": "Rice noodles, cooked",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": true,
+    "kcal_per_100g": 107,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "banh bot loc",
+  "name": "Banh bot loc",
+  "cuisine": "Vietnamese",
+  "sources": [
+   "vietnamese"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708708",
+    "food": "Wonton, dumpling or pot sticker, steamed",
+    "dataset": "FNDDS",
+    "grams": 120,
+    "approx": true,
+    "kcal_per_100g": 113,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "banh can",
+  "name": "Banh can",
+  "cuisine": "Vietnamese",
+  "sources": [
+   "vietnamese"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708342",
+    "food": "Crepe, plain",
+    "dataset": "FNDDS",
+    "grams": 120,
+    "approx": true,
+    "kcal_per_100g": 224,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "banh canh",
+  "name": "Banh canh",
+  "cuisine": "Vietnamese",
+  "sources": [
+   "vietnamese"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709145",
+    "food": "Soup, noodle, NFS",
+    "dataset": "FNDDS",
+    "grams": 450,
+    "approx": true,
+    "kcal_per_100g": 90,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "banh chung",
+  "name": "Banh chung",
+  "cuisine": "Vietnamese",
+  "sources": [
+   "vietnamese"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708348",
+    "food": "Cake made with glutinous rice and dried beans",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": true,
+    "kcal_per_100g": 185,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "banh cuon",
+  "name": "Banh cuon",
+  "cuisine": "Vietnamese",
+  "sources": [
+   "vietnamese"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708704",
+    "food": "Roll with meat and/or shrimp, vegetables and rice paper, not fried",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": true,
+    "kcal_per_100g": 112,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "banh duc",
+  "name": "Banh duc",
+  "cuisine": "Vietnamese",
+  "sources": [
+   "vietnamese"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708345",
+    "food": "Cake made with glutinous rice",
+    "dataset": "FNDDS",
+    "grams": 100,
+    "approx": true,
+    "kcal_per_100g": 279,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "banh gio",
+  "name": "Banh gio",
+  "cuisine": "Vietnamese",
+  "sources": [
+   "vietnamese"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708708",
+    "food": "Wonton, dumpling or pot sticker, steamed",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": true,
+    "kcal_per_100g": 113,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "banh khot",
+  "name": "Banh khot",
+  "cuisine": "Vietnamese",
+  "sources": [
+   "vietnamese"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708342",
+    "food": "Crepe, plain",
+    "dataset": "FNDDS",
+    "grams": 120,
+    "approx": true,
+    "kcal_per_100g": 224,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "banh mi",
+  "name": "Banh mi",
+  "cuisine": "Vietnamese",
+  "sources": [
+   "vietnamese"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:BFP468",
+    "food": "Submarine sandwich",
+    "dataset": "INDB",
+    "grams": 200,
+    "approx": true,
+    "kcal_per_100g": 217,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "banh pia",
+  "name": "Banh pia",
+  "cuisine": "Vietnamese",
+  "sources": [
+   "vietnamese"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707678",
+    "food": "Croissant",
+    "dataset": "FNDDS",
+    "grams": 70,
+    "approx": true,
+    "kcal_per_100g": 406,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "banh tet",
+  "name": "Banh tet",
+  "cuisine": "Vietnamese",
+  "sources": [
+   "vietnamese"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708348",
+    "food": "Cake made with glutinous rice and dried beans",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": true,
+    "kcal_per_100g": 185,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "banh trang nuong",
+  "name": "Banh trang nuong",
+  "cuisine": "Vietnamese",
+  "sources": [
+   "vietnamese"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708166",
+    "food": "Rice paper",
+    "dataset": "FNDDS",
+    "grams": 60,
+    "approx": true,
+    "kcal_per_100g": 323,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "banh xeo",
+  "name": "Banh xeo",
+  "cuisine": "Vietnamese",
+  "sources": [
+   "vietnamese"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708341",
+    "food": "Crepe, NFS",
+    "dataset": "FNDDS",
+    "grams": 200,
+    "approx": true,
+    "kcal_per_100g": 224,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "basundi",
+  "name": "Basundi",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:OSR025",
+    "food": "Thickened sweetened milk (Rabri)",
+    "dataset": "INDB",
+    "grams": 150,
+    "approx": true,
+    "kcal_per_100g": 103,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "beef carpaccio",
+  "name": "Beef carpaccio",
+  "cuisine": "Italian",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2705853",
+    "food": "Beef, ground, raw",
+    "dataset": "FNDDS",
+    "grams": 85,
+    "approx": true,
+    "kcal_per_100g": 213,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "beef tartare",
+  "name": "Beef tartare",
+  "cuisine": "French",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2706394",
+    "food": "Steak tartare",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 216,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "beet salad",
+  "name": "Beet salad",
+  "cuisine": "American",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709770",
+    "food": "Beets, raw",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": true,
+    "kcal_per_100g": 43,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "beetroot",
+  "name": "Beetroot",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709770",
+    "food": "Beets, raw",
+    "dataset": "FNDDS",
+    "grams": 100,
+    "approx": false,
+    "kcal_per_100g": 43,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "beignets",
+  "name": "Beignets",
+  "cuisine": "French",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708071",
+    "food": "Beignet",
+    "dataset": "FNDDS",
+    "grams": 90,
+    "approx": false,
+    "kcal_per_100g": 417,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "besan chela",
+  "name": "Besan chela",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:BFP570",
+    "food": "Besan bathua chilla/cheela",
+    "dataset": "INDB",
+    "grams": 80,
+    "approx": false,
+    "kcal_per_100g": 374,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "besan laddu",
+  "name": "Besan laddu",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC343",
+    "food": "Gram flour ladoo (Besan ladoo)",
+    "dataset": "INDB",
+    "grams": 35,
+    "approx": false,
+    "kcal_per_100g": 477,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "bharli vangi",
+  "name": "Bharli vangi",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC187",
+    "food": "Stuffed brinjal (Bharwa baingan)",
+    "dataset": "INDB",
+    "grams": 150,
+    "approx": true,
+    "kcal_per_100g": 93,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "bharwa baigan",
+  "name": "Bharwa baigan",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC187",
+    "food": "Stuffed brinjal (Bharwa baingan)",
+    "dataset": "INDB",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 93,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "bhatura",
+  "name": "Bhatura",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707714",
+    "food": "Bread, puri",
+    "dataset": "FNDDS",
+    "grams": 90,
+    "approx": true,
+    "kcal_per_100g": 409,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "bhel puri",
+  "name": "Bhel puri",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708213",
+    "food": "Snack mix",
+    "dataset": "FNDDS",
+    "grams": 50,
+    "approx": true,
+    "kcal_per_100g": 504,
+    "serving_desc": null
+   },
+   {
+    "food_id": "usda:2709795",
+    "food": "Onions, raw",
+    "dataset": "FNDDS",
+    "grams": 30,
+    "approx": false,
+    "kcal_per_100g": 38,
+    "serving_desc": null
+   },
+   {
+    "food_id": "usda:2709719",
+    "food": "Tomatoes, raw",
+    "dataset": "FNDDS",
+    "grams": 30,
+    "approx": false,
+    "kcal_per_100g": 20,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "bhindi masala",
+  "name": "Bhindi masala",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:BFP269",
+    "food": "Okra/Lady's fingers fry (Bhindi sabzi/sabji/subji)",
+    "dataset": "INDB",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 111,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "bibimbap",
+  "name": "Bibimbap",
+  "cuisine": "Korean",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708950",
+    "food": "Bibimbap, Korean",
+    "dataset": "FNDDS",
+    "grams": 400,
+    "approx": false,
+    "kcal_per_100g": 76,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "biryani",
+  "name": "Biryani",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2706490",
+    "food": "Biryani with meat",
+    "dataset": "FNDDS",
+    "grams": 300,
+    "approx": false,
+    "kcal_per_100g": 145,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "boondi",
+  "name": "Boondi",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708213",
+    "food": "Snack mix",
+    "dataset": "FNDDS",
+    "grams": 30,
+    "approx": true,
+    "kcal_per_100g": 504,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "boondi laddu",
+  "name": "Boondi laddu",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2710351",
+    "food": "Ladoo, round ball",
+    "dataset": "FNDDS",
+    "grams": 40,
+    "approx": true,
+    "kcal_per_100g": 411,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "boondi rayta",
+  "name": "Boondi rayta",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC273",
+    "food": "Cucumber raita (Kheere ka raita)",
+    "dataset": "INDB",
+    "grams": 150,
+    "approx": true,
+    "kcal_per_100g": 59,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "bottleguard rayta",
+  "name": "Bottleguard rayta",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC273",
+    "food": "Cucumber raita (Kheere ka raita)",
+    "dataset": "INDB",
+    "grams": 150,
+    "approx": true,
+    "kcal_per_100g": 59,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "bread",
+  "name": "Bread",
+  "cuisine": "",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707598",
+    "food": "Bread, white",
+    "dataset": "FNDDS",
+    "grams": 50,
+    "approx": false,
+    "kcal_per_100g": 267,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "bread pakoda",
+  "name": "Bread pakoda",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708024",
+    "food": "Fritter, plain",
+    "dataset": "FNDDS",
+    "grams": 90,
+    "approx": true,
+    "kcal_per_100g": 378,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "bread pudding",
+  "name": "Bread pudding",
+  "cuisine": "American",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2705680",
+    "food": "Pudding, bread",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 156,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "breakfast burrito",
+  "name": "Breakfast burrito",
+  "cuisine": "Mexican",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707343",
+    "food": "Egg burrito",
+    "dataset": "FNDDS",
+    "grams": 200,
+    "approx": false,
+    "kcal_per_100g": 249,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "brownie",
+  "name": "Brownie",
+  "cuisine": "",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707904",
+    "food": "Cookie, brownie, without icing",
+    "dataset": "FNDDS",
+    "grams": 60,
+    "approx": false,
+    "kcal_per_100g": 405,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "bruschetta",
+  "name": "Bruschetta",
+  "cuisine": "Italian",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707652",
+    "food": "Bruschetta",
+    "dataset": "FNDDS",
+    "grams": 90,
+    "approx": false,
+    "kcal_per_100g": 171,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "bun bo hue",
+  "name": "Bun bo hue",
+  "cuisine": "Vietnamese",
+  "sources": [
+   "vietnamese"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709145",
+    "food": "Soup, noodle, NFS",
+    "dataset": "FNDDS",
+    "grams": 500,
+    "approx": true,
+    "kcal_per_100g": 90,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "bun dau mam tom",
+  "name": "Bun dau mam tom",
+  "cuisine": "Vietnamese",
+  "sources": [
+   "vietnamese"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708356",
+    "food": "Rice noodles, cooked",
+    "dataset": "FNDDS",
+    "grams": 300,
+    "approx": true,
+    "kcal_per_100g": 107,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "bun mam",
+  "name": "Bun mam",
+  "cuisine": "Vietnamese",
+  "sources": [
+   "vietnamese"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709145",
+    "food": "Soup, noodle, NFS",
+    "dataset": "FNDDS",
+    "grams": 500,
+    "approx": true,
+    "kcal_per_100g": 90,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "bun rieu",
+  "name": "Bun rieu",
+  "cuisine": "Vietnamese",
+  "sources": [
+   "vietnamese"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709145",
+    "food": "Soup, noodle, NFS",
+    "dataset": "FNDDS",
+    "grams": 500,
+    "approx": true,
+    "kcal_per_100g": 90,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "bun thit nuong",
+  "name": "Bun thit nuong",
+  "cuisine": "Vietnamese",
+  "sources": [
+   "vietnamese"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708356",
+    "food": "Rice noodles, cooked",
+    "dataset": "FNDDS",
+    "grams": 350,
+    "approx": true,
+    "kcal_per_100g": 107,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "burger",
+  "name": "Burger",
+  "cuisine": "American",
+  "sources": [
+   "food101",
+   "indian",
+   "malaysian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2706922",
+    "food": "Hamburger (Burger King)",
+    "dataset": "FNDDS",
+    "grams": 200,
+    "approx": false,
+    "kcal_per_100g": 254,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "butter chicken",
+  "name": "Butter chicken",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC242",
+    "food": "Butter chicken",
+    "dataset": "INDB",
+    "grams": 250,
+    "approx": false,
+    "kcal_per_100g": 137,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "butter naan",
+  "name": "Butter naan",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707613",
+    "food": "Bread, naan",
+    "dataset": "FNDDS",
+    "grams": 90,
+    "approx": false,
+    "kcal_per_100g": 311,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "ca kho to",
+  "name": "Ca kho to",
+  "cuisine": "Vietnamese",
+  "sources": [
+   "vietnamese"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2706466",
+    "food": "Stew, fish",
+    "dataset": "FNDDS",
+    "grams": 250,
+    "approx": true,
+    "kcal_per_100g": 46,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "cabbage",
+  "name": "Cabbage",
+  "cuisine": "",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709891",
+    "food": "Cabbage, green, cooked with oil",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 58,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "caesar salad",
+  "name": "Caesar salad",
+  "cuisine": "American",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709591",
+    "food": "Caesar salad, with romaine, no dressing",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 77,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "cake",
+  "name": "Cake",
+  "cuisine": "",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707853",
+    "food": "Cake or cupcake, NFS",
+    "dataset": "FNDDS",
+    "grams": 100,
+    "approx": false,
+    "kcal_per_100g": 352,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "canh chua",
+  "name": "Canh chua",
+  "cuisine": "Vietnamese",
+  "sources": [
+   "vietnamese"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707136",
+    "food": "Soup, hot and sour",
+    "dataset": "FNDDS",
+    "grams": 350,
+    "approx": true,
+    "kcal_per_100g": 39,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "canned potatoes",
+  "name": "Canned potatoes",
+  "cuisine": "",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709401",
+    "food": "Potato, canned, no added fat",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 60,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "cannoli",
+  "name": "Cannoli",
+  "cuisine": "Italian",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708030",
+    "food": "Cream puff, eclair, custard or cream filled, not iced",
+    "dataset": "FNDDS",
+    "grams": 70,
+    "approx": true,
+    "kcal_per_100g": 264,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "cao lau",
+  "name": "Cao lau",
+  "cuisine": "Vietnamese",
+  "sources": [
+   "vietnamese"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708356",
+    "food": "Rice noodles, cooked",
+    "dataset": "FNDDS",
+    "grams": 350,
+    "approx": true,
+    "kcal_per_100g": 107,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "caprese salad",
+  "name": "Caprese salad",
+  "cuisine": "Italian",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2705818",
+    "food": "Mozzarella cheese, tomato, and basil, with oil and vinegar dressing",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 139,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "capsicum dishes",
+  "name": "Capsicum dishes",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC186",
+    "food": "Stuffed capsicum (Bharwa shimla mirch)",
+    "dataset": "INDB",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 91,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "carrot cake",
+  "name": "Carrot cake",
+  "cuisine": "American",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707859",
+    "food": "Cake or cupcake, carrot",
+    "dataset": "FNDDS",
+    "grams": 100,
+    "approx": false,
+    "kcal_per_100g": 374,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "carrot dishes",
+  "name": "Carrot dishes",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709664",
+    "food": "Carrots, fresh, cooked, no added fat",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 50,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "ceviche",
+  "name": "Ceviche",
+  "cuisine": "Peruvian",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2706463",
+    "food": "Ceviche",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 63,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "chaas",
+  "name": "Chaas",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2705393",
+    "food": "Buttermilk",
+    "dataset": "FNDDS",
+    "grams": 250,
+    "approx": false,
+    "kcal_per_100g": 43,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "chai",
+  "name": "Chai",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC001",
+    "food": "Hot tea (Garam Chai)",
+    "dataset": "INDB",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 16,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "chak hao kheer",
+  "name": "Chak hao kheer",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:OSR011",
+    "food": "Black rice kheer (Chak-hao kheer)",
+    "dataset": "INDB",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 148,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "cham cham",
+  "name": "Cham cham",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2705700",
+    "food": "Barfi or Burfi, Indian dessert",
+    "dataset": "FNDDS",
+    "grams": 60,
+    "approx": true,
+    "kcal_per_100g": 284,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "chana masala",
+  "name": "Chana masala",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC162",
+    "food": "Chickpeas curry (Safed channa curry)",
+    "dataset": "INDB",
+    "grams": 200,
+    "approx": false,
+    "kcal_per_100g": 163,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "chao long",
+  "name": "Chao long",
+  "cuisine": "Vietnamese",
+  "sources": [
+   "vietnamese"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708418",
+    "food": "Congee",
+    "dataset": "FNDDS",
+    "grams": 350,
+    "approx": true,
+    "kcal_per_100g": 39,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "chapati",
+  "name": "Chapati",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC096",
+    "food": "Chapati/Roti",
+    "dataset": "INDB",
+    "grams": 40,
+    "approx": false,
+    "kcal_per_100g": 202,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "cheese plate",
+  "name": "Cheese plate",
+  "cuisine": "",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2705709",
+    "food": "Cheese, Cheddar",
+    "dataset": "FNDDS",
+    "grams": 60,
+    "approx": true,
+    "kcal_per_100g": 409,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "cheesecake",
+  "name": "Cheesecake",
+  "cuisine": "American",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707861",
+    "food": "Cheesecake, plain",
+    "dataset": "FNDDS",
+    "grams": 110,
+    "approx": false,
+    "kcal_per_100g": 399,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "chhena kheeri",
+  "name": "Chhena kheeri",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:BFP393",
+    "food": "Rasmalai",
+    "dataset": "INDB",
+    "grams": 150,
+    "approx": true,
+    "kcal_per_100g": 136,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "chicken curry",
+  "name": "Chicken curry",
+  "cuisine": "Indian",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2706437",
+    "food": "Chicken curry",
+    "dataset": "FNDDS",
+    "grams": 250,
+    "approx": false,
+    "kcal_per_100g": 107,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "chicken pizza",
+  "name": "Chicken pizza",
+  "cuisine": "",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708616",
+    "food": "Pizza, cheese, from restaurant or fast food, medium crust",
+    "dataset": "FNDDS",
+    "grams": 200,
+    "approx": true,
+    "kcal_per_100g": 266,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "chicken quesadilla",
+  "name": "Chicken quesadilla",
+  "cuisine": "American",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708593",
+    "food": "Quesadilla, chicken",
+    "dataset": "FNDDS",
+    "grams": 180,
+    "approx": false,
+    "kcal_per_100g": 287,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "chicken rezala",
+  "name": "Chicken rezala",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:BFP222",
+    "food": "Chicken korma",
+    "dataset": "INDB",
+    "grams": 250,
+    "approx": true,
+    "kcal_per_100g": 148,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "chicken tikka",
+  "name": "Chicken tikka",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC241",
+    "food": "Tandoori chicken",
+    "dataset": "INDB",
+    "grams": 150,
+    "approx": true,
+    "kcal_per_100g": 145,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "chicken tikka masala",
+  "name": "Chicken tikka masala",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:BFP214",
+    "food": "Shahi chicken masala",
+    "dataset": "INDB",
+    "grams": 250,
+    "approx": true,
+    "kcal_per_100g": 164,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "chicken wings",
+  "name": "Chicken wings",
+  "cuisine": "American",
+  "sources": [
+   "food101",
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2706068",
+    "food": "Chicken wing, fried, coated, from restaurant",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 323,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "chikki",
+  "name": "Chikki",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC382",
+    "food": "Peanut brittle (Moongfali ki chikki)",
+    "dataset": "INDB",
+    "grams": 25,
+    "approx": false,
+    "kcal_per_100g": 320,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "chilli pepper",
+  "name": "Chilli pepper",
+  "cuisine": "",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2710096",
+    "food": "Peppers, jalapenos",
+    "dataset": "FNDDS",
+    "grams": 30,
+    "approx": false,
+    "kcal_per_100g": 26,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "chilli potato",
+  "name": "Chilli potato",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709456",
+    "food": "Potato, french fries, NFS",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": true,
+    "kcal_per_100g": 225,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "chivda",
+  "name": "Chivda",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708213",
+    "food": "Snack mix",
+    "dataset": "FNDDS",
+    "grams": 40,
+    "approx": true,
+    "kcal_per_100g": 504,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "chocolate cake",
+  "name": "Chocolate cake",
+  "cuisine": "American",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707866",
+    "food": "Cake or cupcake, chocolate with chocolate icing, bakery",
+    "dataset": "FNDDS",
+    "grams": 100,
+    "approx": false,
+    "kcal_per_100g": 345,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "chocolate mousse",
+  "name": "Chocolate mousse",
+  "cuisine": "American",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC315",
+    "food": "Rich chocolate mousse",
+    "dataset": "INDB",
+    "grams": 100,
+    "approx": false,
+    "kcal_per_100g": 188,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "chole bhature",
+  "name": "Chole bhature",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC162",
+    "food": "Chickpeas curry (Safed channa curry)",
+    "dataset": "INDB",
+    "grams": 200,
+    "approx": false,
+    "kcal_per_100g": 163,
+    "serving_desc": null
+   },
+   {
+    "food_id": "usda:2707714",
+    "food": "Bread, puri",
+    "dataset": "FNDDS",
+    "grams": 90,
+    "approx": true,
+    "kcal_per_100g": 409,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "chop suey",
+  "name": "Chop suey",
+  "cuisine": "",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2706607",
+    "food": "Beef chow mein or chop suey with noodles",
+    "dataset": "FNDDS",
+    "grams": 250,
+    "approx": false,
+    "kcal_per_100g": 129,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "chow mein",
+  "name": "Chow mein",
+  "cuisine": "",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2710069",
+    "food": "Chow mein or chop suey, meatless, with noodles",
+    "dataset": "FNDDS",
+    "grams": 250,
+    "approx": false,
+    "kcal_per_100g": 117,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "churros",
+  "name": "Churros",
+  "cuisine": "Spanish",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708070",
+    "food": "Churros",
+    "dataset": "FNDDS",
+    "grams": 60,
+    "approx": false,
+    "kcal_per_100g": 419,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "clam chowder",
+  "name": "Clam chowder",
+  "cuisine": "American",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707139",
+    "food": "Soup, New England clam chowder",
+    "dataset": "FNDDS",
+    "grams": 250,
+    "approx": false,
+    "kcal_per_100g": 93,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "club sandwich",
+  "name": "Club sandwich",
+  "cuisine": "American",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2706993",
+    "food": "Club sandwich on white",
+    "dataset": "FNDDS",
+    "grams": 200,
+    "approx": false,
+    "kcal_per_100g": 222,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "com tam",
+  "name": "Com tam",
+  "cuisine": "Vietnamese",
+  "sources": [
+   "vietnamese"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708402",
+    "food": "Rice, cooked, NFS",
+    "dataset": "FNDDS",
+    "grams": 200,
+    "approx": false,
+    "kcal_per_100g": 129,
+    "serving_desc": null
+   },
+   {
+    "food_id": "usda:2705867",
+    "food": "Pork, chop, lean and fat eaten",
+    "dataset": "FNDDS",
+    "grams": 100,
+    "approx": true,
+    "kcal_per_100g": 195,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "cooked oatmeal",
+  "name": "Cooked oatmeal",
+  "cuisine": "",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708380",
+    "food": "Oatmeal, NFS",
+    "dataset": "FNDDS",
+    "grams": 240,
+    "approx": false,
+    "kcal_per_100g": 76,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "cooked pasta",
+  "name": "Cooked pasta",
+  "cuisine": "",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708357",
+    "food": "Pasta, cooked",
+    "dataset": "FNDDS",
+    "grams": 200,
+    "approx": false,
+    "kcal_per_100g": 157,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "corn",
+  "name": "Corn",
+  "cuisine": "",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709910",
+    "food": "Corn, fresh, cooked, no added fat",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 86,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "crab cakes",
+  "name": "Crab cakes",
+  "cuisine": "American",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2706549",
+    "food": "Crab, cake",
+    "dataset": "FNDDS",
+    "grams": 100,
+    "approx": false,
+    "kcal_per_100g": 214,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "creme brulee",
+  "name": "Creme brulee",
+  "cuisine": "French",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2705684",
+    "food": "Creme brulee",
+    "dataset": "FNDDS",
+    "grams": 130,
+    "approx": false,
+    "kcal_per_100g": 113,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "croque madame",
+  "name": "Croque madame",
+  "cuisine": "French",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2705801",
+    "food": "Grilled cheese sandwich, NFS",
+    "dataset": "FNDDS",
+    "grams": 200,
+    "approx": true,
+    "kcal_per_100g": 343,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "cucumber",
+  "name": "Cucumber",
+  "cuisine": "",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709784",
+    "food": "Cucumber, raw",
+    "dataset": "FNDDS",
+    "grams": 100,
+    "approx": false,
+    "kcal_per_100g": 16,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "cup cakes",
+  "name": "Cup cakes",
+  "cuisine": "American",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707853",
+    "food": "Cake or cupcake, NFS",
+    "dataset": "FNDDS",
+    "grams": 60,
+    "approx": false,
+    "kcal_per_100g": 352,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "custard",
+  "name": "Custard",
+  "cuisine": "",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2705682",
+    "food": "Custard",
+    "dataset": "FNDDS",
+    "grams": 130,
+    "approx": false,
+    "kcal_per_100g": 97,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "cutlet",
+  "name": "Cutlet",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709510",
+    "food": "Potato patty",
+    "dataset": "FNDDS",
+    "grams": 100,
+    "approx": true,
+    "kcal_per_100g": 171,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "daal baati churma",
+  "name": "Daal baati churma",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707427",
+    "food": "Dal",
+    "dataset": "FNDDS",
+    "grams": 200,
+    "approx": false,
+    "kcal_per_100g": 145,
+    "serving_desc": null
+   },
+   {
+    "food_id": "usda:2707715",
+    "food": "Bread, paratha",
+    "dataset": "FNDDS",
+    "grams": 120,
+    "approx": true,
+    "kcal_per_100g": 326,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "daal makhni",
+  "name": "Daal makhni",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707427",
+    "food": "Dal",
+    "dataset": "FNDDS",
+    "grams": 250,
+    "approx": true,
+    "kcal_per_100g": 145,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "daal puri",
+  "name": "Daal puri",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707714",
+    "food": "Bread, puri",
+    "dataset": "FNDDS",
+    "grams": 80,
+    "approx": true,
+    "kcal_per_100g": 409,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "dahi bhalla",
+  "name": "Dahi bhalla",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709130",
+    "food": "Vada",
+    "dataset": "FNDDS",
+    "grams": 80,
+    "approx": false,
+    "kcal_per_100g": 266,
+    "serving_desc": null
+   },
+   {
+    "food_id": "usda:2705414",
+    "food": "Yogurt, NFS",
+    "dataset": "FNDDS",
+    "grams": 120,
+    "approx": false,
+    "kcal_per_100g": 94,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "dahi vada",
+  "name": "Dahi vada",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709130",
+    "food": "Vada",
+    "dataset": "FNDDS",
+    "grams": 80,
+    "approx": false,
+    "kcal_per_100g": 266,
+    "serving_desc": null
+   },
+   {
+    "food_id": "usda:2705414",
+    "food": "Yogurt, NFS",
+    "dataset": "FNDDS",
+    "grams": 120,
+    "approx": false,
+    "kcal_per_100g": 94,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "dal khichdi",
+  "name": "Dal khichdi",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC487",
+    "food": "Vegetable khichdi/khichri",
+    "dataset": "INDB",
+    "grams": 250,
+    "approx": false,
+    "kcal_per_100g": 143,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "dal tadka",
+  "name": "Dal tadka",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707427",
+    "food": "Dal",
+    "dataset": "FNDDS",
+    "grams": 200,
+    "approx": false,
+    "kcal_per_100g": 145,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "daliya kheer",
+  "name": "Daliya kheer",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC047",
+    "food": "Cracked wheat porridge (Meetha daliya)",
+    "dataset": "INDB",
+    "grams": 200,
+    "approx": false,
+    "kcal_per_100g": 82,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "daliya khichdi",
+  "name": "Daliya khichdi",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC490",
+    "food": "Cracked wheat khichri/khichdi (Dalia khichri/khichdi)",
+    "dataset": "INDB",
+    "grams": 250,
+    "approx": false,
+    "kcal_per_100g": 167,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "deviled eggs",
+  "name": "Deviled eggs",
+  "cuisine": "American",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707181",
+    "food": "Egg, deviled",
+    "dataset": "FNDDS",
+    "grams": 60,
+    "approx": false,
+    "kcal_per_100g": 198,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "dharwad pedha",
+  "name": "Dharwad pedha",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2705700",
+    "food": "Barfi or Burfi, Indian dessert",
+    "dataset": "FNDDS",
+    "grams": 40,
+    "approx": true,
+    "kcal_per_100g": 284,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "dhokla",
+  "name": "Dhokla",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC474",
+    "food": "Dhokla",
+    "dataset": "INDB",
+    "grams": 100,
+    "approx": false,
+    "kcal_per_100g": 216,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "donuts",
+  "name": "Donuts",
+  "cuisine": "American",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708062",
+    "food": "Doughnut, NFS",
+    "dataset": "FNDDS",
+    "grams": 75,
+    "approx": false,
+    "kcal_per_100g": 426,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "doodhpak",
+  "name": "Doodhpak",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC282",
+    "food": "Rice kheer (Chawal ki kheer)",
+    "dataset": "INDB",
+    "grams": 150,
+    "approx": true,
+    "kcal_per_100g": 75,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "double ka meetha",
+  "name": "Double ka meetha",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2705680",
+    "food": "Pudding, bread",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": true,
+    "kcal_per_100g": 156,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "doughnut",
+  "name": "Doughnut",
+  "cuisine": "",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708062",
+    "food": "Doughnut, NFS",
+    "dataset": "FNDDS",
+    "grams": 75,
+    "approx": false,
+    "kcal_per_100g": 426,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "dum aloo",
+  "name": "Dum aloo",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC190",
+    "food": "Pea potato curry (Aloo matar)",
+    "dataset": "INDB",
+    "grams": 200,
+    "approx": true,
+    "kcal_per_100g": 101,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "dumplings",
+  "name": "Dumplings",
+  "cuisine": "Chinese",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708708",
+    "food": "Wonton, dumpling or pot sticker, steamed",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 113,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "edamame",
+  "name": "Edamame",
+  "cuisine": "Japanese",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707436",
+    "food": "Edamame, cooked",
+    "dataset": "FNDDS",
+    "grams": 100,
+    "approx": false,
+    "kcal_per_100g": 140,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "egg bhurji",
+  "name": "Egg bhurji",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC059",
+    "food": "Scrambled egg (Ande ki bhurji)",
+    "dataset": "INDB",
+    "grams": 120,
+    "approx": false,
+    "kcal_per_100g": 156,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "eggs benedict",
+  "name": "Eggs benedict",
+  "cuisine": "American",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707180",
+    "food": "Egg, Benedict",
+    "dataset": "FNDDS",
+    "grams": 200,
+    "approx": false,
+    "kcal_per_100g": 288,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "escargots",
+  "name": "Escargots",
+  "cuisine": "French",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2706368",
+    "food": "Escargot",
+    "dataset": "FNDDS",
+    "grams": 100,
+    "approx": false,
+    "kcal_per_100g": 158,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "falafel",
+  "name": "Falafel",
+  "cuisine": "Middle Eastern",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707408",
+    "food": "Falafel",
+    "dataset": "FNDDS",
+    "grams": 100,
+    "approx": false,
+    "kcal_per_100g": 514,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "falooda",
+  "name": "Falooda",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2705504",
+    "food": "Milk shake, home recipe, flavors other than chocolate",
+    "dataset": "FNDDS",
+    "grams": 300,
+    "approx": true,
+    "kcal_per_100g": 113,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "filet mignon",
+  "name": "Filet mignon",
+  "cuisine": "American",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2705834",
+    "food": "Beef, steak, sirloin, lean only eaten",
+    "dataset": "FNDDS",
+    "grams": 170,
+    "approx": false,
+    "kcal_per_100g": 216,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "fish and chips",
+  "name": "Fish and chips",
+  "cuisine": "British",
+  "sources": [
+   "food101",
+   "malaysian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2706244",
+    "food": "Fish, cod, fried",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 217,
+    "serving_desc": null
+   },
+   {
+    "food_id": "usda:2709456",
+    "food": "Potato, french fries, NFS",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 225,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "fish curry",
+  "name": "Fish curry",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2706460",
+    "food": "Fish curry",
+    "dataset": "FNDDS",
+    "grams": 250,
+    "approx": false,
+    "kcal_per_100g": 93,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "fish fry",
+  "name": "Fish fry",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2706238",
+    "food": "Fish, catfish, fried",
+    "dataset": "FNDDS",
+    "grams": 120,
+    "approx": true,
+    "kcal_per_100g": 255,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "flaxseed",
+  "name": "Flaxseed",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:169414",
+    "food": "Seeds, flaxseed",
+    "dataset": "SR Legacy",
+    "grams": 15,
+    "approx": false,
+    "kcal_per_100g": 534,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "foie gras",
+  "name": "Foie gras",
+  "cuisine": "French",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:171100",
+    "food": "Pate de foie gras, canned (goose liver pate), smoked",
+    "dataset": "SR Legacy",
+    "grams": 40,
+    "approx": false,
+    "kcal_per_100g": 462,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "french fries",
+  "name": "French fries",
+  "cuisine": "French",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709456",
+    "food": "Potato, french fries, NFS",
+    "dataset": "FNDDS",
+    "grams": 120,
+    "approx": false,
+    "kcal_per_100g": 225,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "french onion soup",
+  "name": "French onion soup",
+  "cuisine": "French",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2710108",
+    "food": "Soup, French onion",
+    "dataset": "FNDDS",
+    "grams": 300,
+    "approx": false,
+    "kcal_per_100g": 108,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "french toast",
+  "name": "French toast",
+  "cuisine": "French",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708331",
+    "food": "French toast, NFS",
+    "dataset": "FNDDS",
+    "grams": 120,
+    "approx": false,
+    "kcal_per_100g": 273,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "fried calamari",
+  "name": "Fried calamari",
+  "cuisine": "American",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2706334",
+    "food": "Calamari, fried",
+    "dataset": "FNDDS",
+    "grams": 120,
+    "approx": false,
+    "kcal_per_100g": 234,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "fried chicken",
+  "name": "Fried chicken",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2706045",
+    "food": "Chicken thigh, fried, coated, skin / coating eaten, from raw",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 273,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "fried noodles",
+  "name": "Fried noodles",
+  "cuisine": "Malaysian",
+  "sources": [
+   "malaysian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708796",
+    "food": "Chow fun noodles with meat and vegetables",
+    "dataset": "FNDDS",
+    "grams": 300,
+    "approx": true,
+    "kcal_per_100g": 102,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "fried rice",
+  "name": "Fried rice",
+  "cuisine": "Chinese",
+  "sources": [
+   "food101",
+   "indian",
+   "malaysian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708952",
+    "food": "Rice, fried, NFS",
+    "dataset": "FNDDS",
+    "grams": 250,
+    "approx": false,
+    "kcal_per_100g": 174,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "frozen yogurt",
+  "name": "Frozen yogurt",
+  "cuisine": "American",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2705451",
+    "food": "Frozen yogurt, NFS",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 127,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "gajar ka halwa",
+  "name": "Gajar ka halwa",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC295",
+    "food": "Carrot halwa (Gajar ka halwa)",
+    "dataset": "INDB",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 173,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "garlic",
+  "name": "Garlic",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:169230",
+    "food": "Garlic, raw",
+    "dataset": "SR Legacy",
+    "grams": 10,
+    "approx": false,
+    "kcal_per_100g": 149,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "garlic bread",
+  "name": "Garlic bread",
+  "cuisine": "American",
+  "sources": [
+   "food101",
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707626",
+    "food": "Garlic bread, NFS",
+    "dataset": "FNDDS",
+    "grams": 80,
+    "approx": false,
+    "kcal_per_100g": 349,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "garlic naan",
+  "name": "Garlic naan",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707613",
+    "food": "Bread, naan",
+    "dataset": "FNDDS",
+    "grams": 90,
+    "approx": false,
+    "kcal_per_100g": 311,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "gavvalu",
+  "name": "Gavvalu",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708062",
+    "food": "Doughnut, NFS",
+    "dataset": "FNDDS",
+    "grams": 40,
+    "approx": true,
+    "kcal_per_100g": 426,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "ghevar",
+  "name": "Ghevar",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708349",
+    "food": "Funnel cake with sugar",
+    "dataset": "FNDDS",
+    "grams": 80,
+    "approx": true,
+    "kcal_per_100g": 353,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "ginger",
+  "name": "Ginger",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2710082",
+    "food": "Ginger root, pickled",
+    "dataset": "FNDDS",
+    "grams": 10,
+    "approx": false,
+    "kcal_per_100g": 20,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "glass of milk",
+  "name": "Glass of milk",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2705385",
+    "food": "Milk, whole",
+    "dataset": "FNDDS",
+    "grams": 250,
+    "approx": false,
+    "kcal_per_100g": 61,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "gnocchi",
+  "name": "Gnocchi",
+  "cuisine": "Italian",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708722",
+    "food": "Gnocchi, potato",
+    "dataset": "FNDDS",
+    "grams": 200,
+    "approx": false,
+    "kcal_per_100g": 135,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "gobi manchurian",
+  "name": "Gobi manchurian",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2710042",
+    "food": "Fried cauliflower",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": true,
+    "kcal_per_100g": 218,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "goi cuon",
+  "name": "Goi cuon",
+  "cuisine": "Vietnamese",
+  "sources": [
+   "vietnamese"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708704",
+    "food": "Roll with meat and/or shrimp, vegetables and rice paper, not fried",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 112,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "grape",
+  "name": "Grape",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709237",
+    "food": "Grapes, raw",
+    "dataset": "FNDDS",
+    "grams": 100,
+    "approx": false,
+    "kcal_per_100g": 83,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "greek salad",
+  "name": "Greek salad",
+  "cuisine": "Greek",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709830",
+    "food": "Greek Salad, no dressing",
+    "dataset": "FNDDS",
+    "grams": 200,
+    "approx": false,
+    "kcal_per_100g": 48,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "grilled cheese sandwich",
+  "name": "Grilled cheese sandwich",
+  "cuisine": "American",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2705801",
+    "food": "Grilled cheese sandwich, NFS",
+    "dataset": "FNDDS",
+    "grams": 120,
+    "approx": false,
+    "kcal_per_100g": 343,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "grilled salmon",
+  "name": "Grilled salmon",
+  "cuisine": "",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2706287",
+    "food": "Fish, salmon, grilled",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 259,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "grilled sandwich",
+  "name": "Grilled sandwich",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:BFP456",
+    "food": "Tomato sandwich (grilled)",
+    "dataset": "INDB",
+    "grams": 120,
+    "approx": false,
+    "kcal_per_100g": 190,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "guacamole",
+  "name": "Guacamole",
+  "cuisine": "Mexican",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709307",
+    "food": "Guacamole, NFS",
+    "dataset": "FNDDS",
+    "grams": 60,
+    "approx": false,
+    "kcal_per_100g": 155,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "gujiya",
+  "name": "Gujiya",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708062",
+    "food": "Doughnut, NFS",
+    "dataset": "FNDDS",
+    "grams": 60,
+    "approx": true,
+    "kcal_per_100g": 426,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "gulab jamun",
+  "name": "Gulab jamun",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2705700",
+    "food": "Barfi or Burfi, Indian dessert",
+    "dataset": "FNDDS",
+    "grams": 80,
+    "approx": true,
+    "kcal_per_100g": 284,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "gyoza",
+  "name": "Gyoza",
+  "cuisine": "Japanese",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708705",
+    "food": "Wonton, dumpling or pot sticker, fried",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 192,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "hara bhara kabab",
+  "name": "Hara bhara kabab",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709510",
+    "food": "Potato patty",
+    "dataset": "FNDDS",
+    "grams": 100,
+    "approx": true,
+    "kcal_per_100g": 171,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "hot and sour soup",
+  "name": "Hot and sour soup",
+  "cuisine": "Chinese",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707136",
+    "food": "Soup, hot and sour",
+    "dataset": "FNDDS",
+    "grams": 250,
+    "approx": false,
+    "kcal_per_100g": 39,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "hot dog",
+  "name": "Hot dog",
+  "cuisine": "American",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707060",
+    "food": "Hot dog sandwich, beef, on white bun",
+    "dataset": "FNDDS",
+    "grams": 100,
+    "approx": false,
+    "kcal_per_100g": 296,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "hot dogs",
+  "name": "Hot dogs",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707060",
+    "food": "Hot dog sandwich, beef, on white bun",
+    "dataset": "FNDDS",
+    "grams": 100,
+    "approx": false,
+    "kcal_per_100g": 296,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "hu tieu",
+  "name": "Hu tieu",
+  "cuisine": "Vietnamese",
+  "sources": [
+   "vietnamese"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709145",
+    "food": "Soup, noodle, NFS",
+    "dataset": "FNDDS",
+    "grams": 500,
+    "approx": true,
+    "kcal_per_100g": 90,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "huevos rancheros",
+  "name": "Huevos rancheros",
+  "cuisine": "Mexican",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707191",
+    "food": "Huevos rancheros",
+    "dataset": "FNDDS",
+    "grams": 250,
+    "approx": false,
+    "kcal_per_100g": 121,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "hummus",
+  "name": "Hummus",
+  "cuisine": "Middle Eastern",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707402",
+    "food": "Hummus, plain",
+    "dataset": "FNDDS",
+    "grams": 60,
+    "approx": false,
+    "kcal_per_100g": 243,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "ice cream",
+  "name": "Ice cream",
+  "cuisine": "American",
+  "sources": [
+   "food101",
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2705630",
+    "food": "Ice cream, vanilla",
+    "dataset": "FNDDS",
+    "grams": 100,
+    "approx": false,
+    "kcal_per_100g": 207,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "idiyappam",
+  "name": "Idiyappam",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708356",
+    "food": "Rice noodles, cooked",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": true,
+    "kcal_per_100g": 107,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "idli",
+  "name": "Idli",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708346",
+    "food": "Idli",
+    "dataset": "FNDDS",
+    "grams": 120,
+    "approx": false,
+    "kcal_per_100g": 128,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "imarti",
+  "name": "Imarti",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708349",
+    "food": "Funnel cake with sugar",
+    "dataset": "FNDDS",
+    "grams": 60,
+    "approx": true,
+    "kcal_per_100g": 353,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "jackfruit",
+  "name": "Jackfruit",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:174687",
+    "food": "Jackfruit, raw",
+    "dataset": "SR Legacy",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 95,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "jalebi",
+  "name": "Jalebi",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708349",
+    "food": "Funnel cake with sugar",
+    "dataset": "FNDDS",
+    "grams": 80,
+    "approx": true,
+    "kcal_per_100g": 353,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "kaala chana",
+  "name": "Kaala chana",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707415",
+    "food": "Chickpeas, from dried, fat added",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": true,
+    "kcal_per_100g": 211,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "kaathi rolls",
+  "name": "Kaathi rolls",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC149",
+    "food": "Paneer kaathi roll",
+    "dataset": "INDB",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 286,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "kachori",
+  "name": "Kachori",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708730",
+    "food": "Samosa",
+    "dataset": "FNDDS",
+    "grams": 60,
+    "approx": true,
+    "kcal_per_100g": 310,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "kadai paneer",
+  "name": "Kadai paneer",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC191",
+    "food": "Pea paneer curry (Matar paneer)",
+    "dataset": "INDB",
+    "grams": 200,
+    "approx": true,
+    "kcal_per_100g": 135,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "kadhi pakoda",
+  "name": "Kadhi pakoda",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2705414",
+    "food": "Yogurt, NFS",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": true,
+    "kcal_per_100g": 94,
+    "serving_desc": null
+   },
+   {
+    "food_id": "usda:2710066",
+    "food": "Pakora",
+    "dataset": "FNDDS",
+    "grams": 80,
+    "approx": false,
+    "kcal_per_100g": 125,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "kajjikaya",
+  "name": "Kajjikaya",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708062",
+    "food": "Doughnut, NFS",
+    "dataset": "FNDDS",
+    "grams": 50,
+    "approx": true,
+    "kcal_per_100g": 426,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "kaju katli",
+  "name": "Kaju katli",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC339",
+    "food": "Cashewnut burfi (Kaju burfi/Kaju katli)",
+    "dataset": "INDB",
+    "grams": 30,
+    "approx": false,
+    "kcal_per_100g": 422,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "kakinada khaja",
+  "name": "Kakinada khaja",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708062",
+    "food": "Doughnut, NFS",
+    "dataset": "FNDDS",
+    "grams": 50,
+    "approx": true,
+    "kcal_per_100g": 426,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "kalakand",
+  "name": "Kalakand",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2705700",
+    "food": "Barfi or Burfi, Indian dessert",
+    "dataset": "FNDDS",
+    "grams": 50,
+    "approx": true,
+    "kcal_per_100g": 284,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "karela bharta",
+  "name": "Karela bharta",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:BFP604",
+    "food": "Stuffed bittergourd (dry) (Bharwa karela)",
+    "dataset": "INDB",
+    "grams": 120,
+    "approx": true,
+    "kcal_per_100g": 218,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "kasmiri nadru",
+  "name": "Kasmiri nadru",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709936",
+    "food": "Lotus root, cooked",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": true,
+    "kcal_per_100g": 87,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "kathi roll",
+  "name": "Kathi roll",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC149",
+    "food": "Paneer kaathi roll",
+    "dataset": "INDB",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 286,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "kaya toast",
+  "name": "Kaya toast",
+  "cuisine": "Malaysian",
+  "sources": [
+   "malaysian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707599",
+    "food": "Bread, white, toasted",
+    "dataset": "FNDDS",
+    "grams": 90,
+    "approx": true,
+    "kcal_per_100g": 293,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "kebabs",
+  "name": "Kebabs",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:BFP199",
+    "food": "Mutton seekh kebab",
+    "dataset": "INDB",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 134,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "khakhra",
+  "name": "Khakhra",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:OSR102",
+    "food": "Khakhra",
+    "dataset": "INDB",
+    "grams": 40,
+    "approx": false,
+    "kcal_per_100g": 178,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "khandvi",
+  "name": "Khandvi",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC474",
+    "food": "Dhokla",
+    "dataset": "INDB",
+    "grams": 100,
+    "approx": true,
+    "kcal_per_100g": 216,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "kheer",
+  "name": "Kheer",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC282",
+    "food": "Rice kheer (Chawal ki kheer)",
+    "dataset": "INDB",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 75,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "khichdi",
+  "name": "Khichdi",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC487",
+    "food": "Vegetable khichdi/khichri",
+    "dataset": "INDB",
+    "grams": 250,
+    "approx": false,
+    "kcal_per_100g": 143,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "khubani ka meetha",
+  "name": "Khubani ka meetha",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2705685",
+    "food": "Pudding, rice",
+    "dataset": "FNDDS",
+    "grams": 100,
+    "approx": true,
+    "kcal_per_100g": 108,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "kiwi",
+  "name": "Kiwi",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709239",
+    "food": "Kiwi fruit, raw",
+    "dataset": "FNDDS",
+    "grams": 75,
+    "approx": false,
+    "kcal_per_100g": 64,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "kofta",
+  "name": "Kofta",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC191",
+    "food": "Pea paneer curry (Matar paneer)",
+    "dataset": "INDB",
+    "grams": 250,
+    "approx": true,
+    "kcal_per_100g": 135,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "kulfi",
+  "name": "Kulfi",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC321",
+    "food": "Kulfi",
+    "dataset": "INDB",
+    "grams": 70,
+    "approx": false,
+    "kcal_per_100g": 98,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "kuzhi paniyaram",
+  "name": "Kuzhi paniyaram",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708347",
+    "food": "Dosa, plain",
+    "dataset": "FNDDS",
+    "grams": 100,
+    "approx": true,
+    "kcal_per_100g": 210,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "laksa",
+  "name": "Laksa",
+  "cuisine": "Malaysian",
+  "sources": [
+   "malaysian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709153",
+    "food": "Ramen bowl, NFS",
+    "dataset": "FNDDS",
+    "grams": 500,
+    "approx": true,
+    "kcal_per_100g": 127,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "lasagna",
+  "name": "Lasagna",
+  "cuisine": "Italian",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708750",
+    "food": "Lasagna with meat",
+    "dataset": "FNDDS",
+    "grams": 250,
+    "approx": false,
+    "kcal_per_100g": 139,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "lassi",
+  "name": "Lassi",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC021",
+    "food": "Sweet Lassi (Meethi lassi)",
+    "dataset": "INDB",
+    "grams": 250,
+    "approx": false,
+    "kcal_per_100g": 36,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "ledikeni",
+  "name": "Ledikeni",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2705700",
+    "food": "Barfi or Burfi, Indian dessert",
+    "dataset": "FNDDS",
+    "grams": 60,
+    "approx": true,
+    "kcal_per_100g": 284,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "lemon",
+  "name": "Lemon",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709168",
+    "food": "Lemon, raw",
+    "dataset": "FNDDS",
+    "grams": 50,
+    "approx": false,
+    "kcal_per_100g": 29,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "lemonade",
+  "name": "Lemonade",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC008",
+    "food": "Lemonade",
+    "dataset": "INDB",
+    "grams": 250,
+    "approx": false,
+    "kcal_per_100g": 21,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "lettuce",
+  "name": "Lettuce",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709789",
+    "food": "Lettuce, raw",
+    "dataset": "FNDDS",
+    "grams": 50,
+    "approx": false,
+    "kcal_per_100g": 20,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "litti chokha",
+  "name": "Litti chokha",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707715",
+    "food": "Bread, paratha",
+    "dataset": "FNDDS",
+    "grams": 120,
+    "approx": true,
+    "kcal_per_100g": 326,
+    "serving_desc": null
+   },
+   {
+    "food_id": "indb:ASC177",
+    "food": "Brinjal bhartha (Baingan ka bhartha)",
+    "dataset": "INDB",
+    "grams": 100,
+    "approx": true,
+    "kcal_per_100g": 65,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "lobster bisque",
+  "name": "Lobster bisque",
+  "cuisine": "American",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707140",
+    "food": "Soup, bisque",
+    "dataset": "FNDDS",
+    "grams": 250,
+    "approx": false,
+    "kcal_per_100g": 75,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "lobster roll sandwich",
+  "name": "Lobster roll sandwich",
+  "cuisine": "American",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2706825",
+    "food": "Lobster salad",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": true,
+    "kcal_per_100g": 187,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "lyangcha",
+  "name": "Lyangcha",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2705700",
+    "food": "Barfi or Burfi, Indian dessert",
+    "dataset": "FNDDS",
+    "grams": 60,
+    "approx": true,
+    "kcal_per_100g": 284,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "maach jhol",
+  "name": "Maach jhol",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:BFP223",
+    "food": "Bengal fish curry (Bengali machli curry)",
+    "dataset": "INDB",
+    "grams": 250,
+    "approx": true,
+    "kcal_per_100g": 109,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "macaroni and cheese",
+  "name": "Macaroni and cheese",
+  "cuisine": "American",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708811",
+    "food": "Macaroni or noodles with cheese",
+    "dataset": "FNDDS",
+    "grams": 230,
+    "approx": false,
+    "kcal_per_100g": 223,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "macaroni salad",
+  "name": "Macaroni salad",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708932",
+    "food": "Macaroni or pasta salad, made with mayonnaise",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 221,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "macarons",
+  "name": "Macarons",
+  "cuisine": "French",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707970",
+    "food": "Cookie, butter or sugar",
+    "dataset": "FNDDS",
+    "grams": 40,
+    "approx": true,
+    "kcal_per_100g": 464,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "maggie noodles",
+  "name": "Maggie noodles",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708352",
+    "food": "Noodles, cooked",
+    "dataset": "FNDDS",
+    "grams": 200,
+    "approx": true,
+    "kcal_per_100g": 137,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "makki di roti sarso da saag",
+  "name": "Makki di roti sarso da saag",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC150",
+    "food": "Makki ki roti",
+    "dataset": "INDB",
+    "grams": 80,
+    "approx": false,
+    "kcal_per_100g": 264,
+    "serving_desc": null
+   },
+   {
+    "food_id": "indb:ASC217",
+    "food": "Sarson ka saag",
+    "dataset": "INDB",
+    "grams": 200,
+    "approx": false,
+    "kcal_per_100g": 88,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "malpua",
+  "name": "Malpua",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:OSR016",
+    "food": "Mango malpua",
+    "dataset": "INDB",
+    "grams": 100,
+    "approx": true,
+    "kcal_per_100g": 335,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "mango",
+  "name": "Mango",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709242",
+    "food": "Mango, raw",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 60,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "margherita pizza",
+  "name": "Margherita pizza",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708616",
+    "food": "Pizza, cheese, from restaurant or fast food, medium crust",
+    "dataset": "FNDDS",
+    "grams": 200,
+    "approx": false,
+    "kcal_per_100g": 266,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "masala dosa",
+  "name": "Masala dosa",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC146",
+    "food": "Masala dosa",
+    "dataset": "INDB",
+    "grams": 200,
+    "approx": false,
+    "kcal_per_100g": 165,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "masala papad",
+  "name": "Masala papad",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707429",
+    "food": "Papad, grilled or broiled",
+    "dataset": "FNDDS",
+    "grams": 20,
+    "approx": false,
+    "kcal_per_100g": 371,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "medu vada",
+  "name": "Medu vada",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709130",
+    "food": "Vada",
+    "dataset": "FNDDS",
+    "grams": 100,
+    "approx": false,
+    "kcal_per_100g": 266,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "mi quang",
+  "name": "Mi quang",
+  "cuisine": "Vietnamese",
+  "sources": [
+   "vietnamese"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708356",
+    "food": "Rice noodles, cooked",
+    "dataset": "FNDDS",
+    "grams": 350,
+    "approx": true,
+    "kcal_per_100g": 107,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "misal pav",
+  "name": "Misal pav",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707431",
+    "food": "Lentil curry",
+    "dataset": "FNDDS",
+    "grams": 200,
+    "approx": true,
+    "kcal_per_100g": 111,
+    "serving_desc": null
+   },
+   {
+    "food_id": "usda:2707657",
+    "food": "Roll, white, hamburger bun",
+    "dataset": "FNDDS",
+    "grams": 100,
+    "approx": false,
+    "kcal_per_100g": 267,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "mishti doi",
+  "name": "Mishti doi",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2705426",
+    "food": "Yogurt, whole milk, fruit",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": true,
+    "kcal_per_100g": 106,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "misi roti",
+  "name": "Misi roti",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC096",
+    "food": "Chapati/Roti",
+    "dataset": "INDB",
+    "grams": 80,
+    "approx": true,
+    "kcal_per_100g": 202,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "miso soup",
+  "name": "Miso soup",
+  "cuisine": "Japanese",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707455",
+    "food": "Soup, miso or tofu",
+    "dataset": "FNDDS",
+    "grams": 250,
+    "approx": false,
+    "kcal_per_100g": 24,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "missi roti",
+  "name": "Missi roti",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC096",
+    "food": "Chapati/Roti",
+    "dataset": "INDB",
+    "grams": 80,
+    "approx": true,
+    "kcal_per_100g": 202,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "misti doi",
+  "name": "Misti doi",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2705426",
+    "food": "Yogurt, whole milk, fruit",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": true,
+    "kcal_per_100g": 106,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "mixed rice",
+  "name": "Mixed rice",
+  "cuisine": "Malaysian",
+  "sources": [
+   "malaysian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708402",
+    "food": "Rice, cooked, NFS",
+    "dataset": "FNDDS",
+    "grams": 200,
+    "approx": false,
+    "kcal_per_100g": 129,
+    "serving_desc": null
+   },
+   {
+    "food_id": "usda:2706437",
+    "food": "Chicken curry",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": true,
+    "kcal_per_100g": 107,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "modak",
+  "name": "Modak",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2710351",
+    "food": "Ladoo, round ball",
+    "dataset": "FNDDS",
+    "grams": 50,
+    "approx": true,
+    "kcal_per_100g": 411,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "momos",
+  "name": "Momos",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708708",
+    "food": "Wonton, dumpling or pot sticker, steamed",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 113,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "moong dal halwa",
+  "name": "Moong dal halwa",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC299",
+    "food": "Moong dal halwa",
+    "dataset": "INDB",
+    "grams": 100,
+    "approx": false,
+    "kcal_per_100g": 350,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "moongdaal papad",
+  "name": "Moongdaal papad",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707429",
+    "food": "Papad, grilled or broiled",
+    "dataset": "FNDDS",
+    "grams": 15,
+    "approx": false,
+    "kcal_per_100g": 371,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "muffin",
+  "name": "Muffin",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707829",
+    "food": "Muffin, NFS",
+    "dataset": "FNDDS",
+    "grams": 110,
+    "approx": false,
+    "kcal_per_100g": 375,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "murukku",
+  "name": "Murukku",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708247",
+    "food": "Pretzels, NFS",
+    "dataset": "FNDDS",
+    "grams": 30,
+    "approx": true,
+    "kcal_per_100g": 384,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "mussels",
+  "name": "Mussels",
+  "cuisine": "French",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2706350",
+    "food": "Mussels",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 109,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "mysore pak",
+  "name": "Mysore pak",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2705700",
+    "food": "Barfi or Burfi, Indian dessert",
+    "dataset": "FNDDS",
+    "grams": 40,
+    "approx": true,
+    "kcal_per_100g": 284,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "naan",
+  "name": "Naan",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707613",
+    "food": "Bread, naan",
+    "dataset": "FNDDS",
+    "grams": 90,
+    "approx": false,
+    "kcal_per_100g": 311,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "naan bread",
+  "name": "Naan bread",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707613",
+    "food": "Bread, naan",
+    "dataset": "FNDDS",
+    "grams": 90,
+    "approx": false,
+    "kcal_per_100g": 311,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "nachos",
+  "name": "Nachos",
+  "cuisine": "Mexican",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708576",
+    "food": "Nachos, NFS",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 265,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "nasi lemak",
+  "name": "Nasi lemak",
+  "cuisine": "Malaysian",
+  "sources": [
+   "malaysian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709032",
+    "food": "Rice, cooked with coconut milk",
+    "dataset": "FNDDS",
+    "grams": 200,
+    "approx": false,
+    "kcal_per_100g": 267,
+    "serving_desc": null
+   },
+   {
+    "food_id": "usda:2707154",
+    "food": "Egg, whole, boiled or poached",
+    "dataset": "FNDDS",
+    "grams": 50,
+    "approx": false,
+    "kcal_per_100g": 143,
+    "serving_desc": null
+   },
+   {
+    "food_id": "usda:2707512",
+    "food": "Peanuts, NFS",
+    "dataset": "FNDDS",
+    "grams": 15,
+    "approx": false,
+    "kcal_per_100g": 587,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "navratan korma",
+  "name": "Navratan korma",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2710067",
+    "food": "Vegetable curry",
+    "dataset": "FNDDS",
+    "grams": 250,
+    "approx": true,
+    "kcal_per_100g": 86,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "neer dosa",
+  "name": "Neer dosa",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708347",
+    "food": "Dosa, plain",
+    "dataset": "FNDDS",
+    "grams": 120,
+    "approx": false,
+    "kcal_per_100g": 210,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "nem chua",
+  "name": "Nem chua",
+  "cuisine": "Vietnamese",
+  "sources": [
+   "vietnamese"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2706191",
+    "food": "Pork sausage",
+    "dataset": "FNDDS",
+    "grams": 60,
+    "approx": true,
+    "kcal_per_100g": 325,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "omelette",
+  "name": "Omelette",
+  "cuisine": "American",
+  "sources": [
+   "food101",
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC061",
+    "food": "Plain omelette/omlet",
+    "dataset": "INDB",
+    "grams": 120,
+    "approx": false,
+    "kcal_per_100g": 272,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "onion",
+  "name": "Onion",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709795",
+    "food": "Onions, raw",
+    "dataset": "FNDDS",
+    "grams": 50,
+    "approx": false,
+    "kcal_per_100g": 38,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "onion pakoda",
+  "name": "Onion pakoda",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2710066",
+    "food": "Pakora",
+    "dataset": "FNDDS",
+    "grams": 100,
+    "approx": false,
+    "kcal_per_100g": 125,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "onion rings",
+  "name": "Onion rings",
+  "cuisine": "American",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2710055",
+    "food": "Fried onion rings",
+    "dataset": "FNDDS",
+    "grams": 120,
+    "approx": false,
+    "kcal_per_100g": 352,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "orange",
+  "name": "Orange",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709171",
+    "food": "Orange, raw",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 50,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "oysters",
+  "name": "Oysters",
+  "cuisine": "American",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2706351",
+    "food": "Oysters, raw",
+    "dataset": "FNDDS",
+    "grams": 100,
+    "approx": false,
+    "kcal_per_100g": 51,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "paani puri",
+  "name": "Paani puri",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707714",
+    "food": "Bread, puri",
+    "dataset": "FNDDS",
+    "grams": 60,
+    "approx": true,
+    "kcal_per_100g": 409,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "pad thai",
+  "name": "Pad thai",
+  "cuisine": "Thai",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708804",
+    "food": "Pad Thai, NFS",
+    "dataset": "FNDDS",
+    "grams": 300,
+    "approx": false,
+    "kcal_per_100g": 154,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "paella",
+  "name": "Paella",
+  "cuisine": "Spanish",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2706723",
+    "food": "Paella, NFS",
+    "dataset": "FNDDS",
+    "grams": 300,
+    "approx": false,
+    "kcal_per_100g": 169,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "pakode",
+  "name": "Pakode",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2710066",
+    "food": "Pakora",
+    "dataset": "FNDDS",
+    "grams": 100,
+    "approx": false,
+    "kcal_per_100g": 125,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "palak paneer",
+  "name": "Palak paneer",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709631",
+    "food": "Palak Paneer",
+    "dataset": "FNDDS",
+    "grams": 200,
+    "approx": false,
+    "kcal_per_100g": 101,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "pan cake",
+  "name": "Pan cake",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708294",
+    "food": "Pancakes, NFS",
+    "dataset": "FNDDS",
+    "grams": 120,
+    "approx": false,
+    "kcal_per_100g": 282,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "pan-fried prawns",
+  "name": "Pan-fried prawns",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2706364",
+    "food": "Shrimp, fried",
+    "dataset": "FNDDS",
+    "grams": 120,
+    "approx": false,
+    "kcal_per_100g": 218,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "pancakes",
+  "name": "Pancakes",
+  "cuisine": "American",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708294",
+    "food": "Pancakes, NFS",
+    "dataset": "FNDDS",
+    "grams": 120,
+    "approx": false,
+    "kcal_per_100g": 282,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "paneer butter masala",
+  "name": "Paneer butter masala",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC222",
+    "food": "Paneer in butter sauce",
+    "dataset": "INDB",
+    "grams": 200,
+    "approx": false,
+    "kcal_per_100g": 146,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "paneer masala",
+  "name": "Paneer masala",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC222",
+    "food": "Paneer in butter sauce",
+    "dataset": "INDB",
+    "grams": 200,
+    "approx": true,
+    "kcal_per_100g": 146,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "paneer pizza",
+  "name": "Paneer pizza",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708616",
+    "food": "Pizza, cheese, from restaurant or fast food, medium crust",
+    "dataset": "FNDDS",
+    "grams": 200,
+    "approx": true,
+    "kcal_per_100g": 266,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "pani puri",
+  "name": "Pani puri",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707714",
+    "food": "Bread, puri",
+    "dataset": "FNDDS",
+    "grams": 60,
+    "approx": true,
+    "kcal_per_100g": 409,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "paniyaram",
+  "name": "Paniyaram",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708347",
+    "food": "Dosa, plain",
+    "dataset": "FNDDS",
+    "grams": 100,
+    "approx": true,
+    "kcal_per_100g": 210,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "panna cotta",
+  "name": "Panna cotta",
+  "cuisine": "Italian",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2705682",
+    "food": "Custard",
+    "dataset": "FNDDS",
+    "grams": 120,
+    "approx": true,
+    "kcal_per_100g": 97,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "papad",
+  "name": "Papad",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707429",
+    "food": "Papad, grilled or broiled",
+    "dataset": "FNDDS",
+    "grams": 15,
+    "approx": false,
+    "kcal_per_100g": 371,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "papdi chaat",
+  "name": "Papdi chaat",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708213",
+    "food": "Snack mix",
+    "dataset": "FNDDS",
+    "grams": 50,
+    "approx": true,
+    "kcal_per_100g": 504,
+    "serving_desc": null
+   },
+   {
+    "food_id": "usda:2705414",
+    "food": "Yogurt, NFS",
+    "dataset": "FNDDS",
+    "grams": 60,
+    "approx": false,
+    "kcal_per_100g": 94,
+    "serving_desc": null
+   },
+   {
+    "food_id": "usda:2707415",
+    "food": "Chickpeas, from dried, fat added",
+    "dataset": "FNDDS",
+    "grams": 30,
+    "approx": false,
+    "kcal_per_100g": 211,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "paprika",
+  "name": "Paprika",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709800",
+    "food": "Peppers, sweet, green, raw",
+    "dataset": "FNDDS",
+    "grams": 100,
+    "approx": false,
+    "kcal_per_100g": 23,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "paratha",
+  "name": "Paratha",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707715",
+    "food": "Bread, paratha",
+    "dataset": "FNDDS",
+    "grams": 80,
+    "approx": false,
+    "kcal_per_100g": 326,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "patrode",
+  "name": "Patrode",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC474",
+    "food": "Dhokla",
+    "dataset": "INDB",
+    "grams": 100,
+    "approx": true,
+    "kcal_per_100g": 216,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "pav bhaji",
+  "name": "Pav bhaji",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:OSR112",
+    "food": "Pav bhaji",
+    "dataset": "INDB",
+    "grams": 200,
+    "approx": false,
+    "kcal_per_100g": 97,
+    "serving_desc": null
+   },
+   {
+    "food_id": "usda:2707657",
+    "food": "Roll, white, hamburger bun",
+    "dataset": "FNDDS",
+    "grams": 100,
+    "approx": false,
+    "kcal_per_100g": 267,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "peanut",
+  "name": "Peanut",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707512",
+    "food": "Peanuts, NFS",
+    "dataset": "FNDDS",
+    "grams": 30,
+    "approx": false,
+    "kcal_per_100g": 587,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "peanut chikki",
+  "name": "Peanut chikki",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC382",
+    "food": "Peanut brittle (Moongfali ki chikki)",
+    "dataset": "INDB",
+    "grams": 25,
+    "approx": false,
+    "kcal_per_100g": 320,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "pear",
+  "name": "Pear",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709254",
+    "food": "Pear, raw",
+    "dataset": "FNDDS",
+    "grams": 180,
+    "approx": false,
+    "kcal_per_100g": 59,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "peas",
+  "name": "Peas",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709958",
+    "food": "Green peas, cooked, from restaurant",
+    "dataset": "FNDDS",
+    "grams": 100,
+    "approx": false,
+    "kcal_per_100g": 119,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "peda",
+  "name": "Peda",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2705700",
+    "food": "Barfi or Burfi, Indian dessert",
+    "dataset": "FNDDS",
+    "grams": 40,
+    "approx": true,
+    "kcal_per_100g": 284,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "peking duck",
+  "name": "Peking duck",
+  "cuisine": "Chinese",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2706141",
+    "food": "Duck, Peking",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 154,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "pepperoni pizza",
+  "name": "Pepperoni pizza",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708636",
+    "food": "Pizza with pepperoni, from frozen, medium crust",
+    "dataset": "FNDDS",
+    "grams": 200,
+    "approx": false,
+    "kcal_per_100g": 275,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "phirni",
+  "name": "Phirni",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC292",
+    "food": "Phirni",
+    "dataset": "INDB",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 116,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "pho",
+  "name": "Pho",
+  "cuisine": "Vietnamese",
+  "sources": [
+   "food101",
+   "vietnamese"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707124",
+    "food": "Soup, pho, with meat",
+    "dataset": "FNDDS",
+    "grams": 500,
+    "approx": false,
+    "kcal_per_100g": 77,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "pineapple",
+  "name": "Pineapple",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709260",
+    "food": "Pineapple, raw",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 60,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "pithe",
+  "name": "Pithe",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708345",
+    "food": "Cake made with glutinous rice",
+    "dataset": "FNDDS",
+    "grams": 80,
+    "approx": true,
+    "kcal_per_100g": 279,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "pizza",
+  "name": "Pizza",
+  "cuisine": "Italian",
+  "sources": [
+   "food101",
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708616",
+    "food": "Pizza, cheese, from restaurant or fast food, medium crust",
+    "dataset": "FNDDS",
+    "grams": 200,
+    "approx": false,
+    "kcal_per_100g": 266,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "poha",
+  "name": "Poha",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:BFP045",
+    "food": "Vegetable poha",
+    "dataset": "INDB",
+    "grams": 200,
+    "approx": false,
+    "kcal_per_100g": 181,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "pomegranate",
+  "name": "Pomegranate",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709267",
+    "food": "Pomegranate, raw",
+    "dataset": "FNDDS",
+    "grams": 100,
+    "approx": false,
+    "kcal_per_100g": 83,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "pongal",
+  "name": "Pongal",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC487",
+    "food": "Vegetable khichdi/khichri",
+    "dataset": "INDB",
+    "grams": 250,
+    "approx": true,
+    "kcal_per_100g": 143,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "poornalu",
+  "name": "Poornalu",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708062",
+    "food": "Doughnut, NFS",
+    "dataset": "FNDDS",
+    "grams": 60,
+    "approx": true,
+    "kcal_per_100g": 426,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "pootharekulu",
+  "name": "Pootharekulu",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2705700",
+    "food": "Barfi or Burfi, Indian dessert",
+    "dataset": "FNDDS",
+    "grams": 40,
+    "approx": true,
+    "kcal_per_100g": 284,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "popcorn",
+  "name": "Popcorn",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708216",
+    "food": "Popcorn, NFS",
+    "dataset": "FNDDS",
+    "grams": 30,
+    "approx": false,
+    "kcal_per_100g": 518,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "popiah",
+  "name": "Popiah",
+  "cuisine": "Malaysian",
+  "sources": [
+   "malaysian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708700",
+    "food": "Egg roll, meatless",
+    "dataset": "FNDDS",
+    "grams": 120,
+    "approx": true,
+    "kcal_per_100g": 270,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "pork chop",
+  "name": "Pork chop",
+  "cuisine": "",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2705867",
+    "food": "Pork, chop, lean and fat eaten",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 195,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "poutine",
+  "name": "Poutine",
+  "cuisine": "Canadian",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709456",
+    "food": "Potato, french fries, NFS",
+    "dataset": "FNDDS",
+    "grams": 250,
+    "approx": true,
+    "kcal_per_100g": 225,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "prime rib",
+  "name": "Prime rib",
+  "cuisine": "American",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2705847",
+    "food": "Beef, roast",
+    "dataset": "FNDDS",
+    "grams": 200,
+    "approx": true,
+    "kcal_per_100g": 206,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "pulled pork sandwich",
+  "name": "Pulled pork sandwich",
+  "cuisine": "American",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2706975",
+    "food": "Barbecue pork sandwich, on white bun",
+    "dataset": "FNDDS",
+    "grams": 200,
+    "approx": false,
+    "kcal_per_100g": 243,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "puri bhaji",
+  "name": "Puri bhaji",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707714",
+    "food": "Bread, puri",
+    "dataset": "FNDDS",
+    "grams": 70,
+    "approx": false,
+    "kcal_per_100g": 409,
+    "serving_desc": null
+   },
+   {
+    "food_id": "indb:ASC178",
+    "food": "Dry potato (Sookhe aloo)",
+    "dataset": "INDB",
+    "grams": 150,
+    "approx": true,
+    "kcal_per_100g": 103,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "qubani ka meetha",
+  "name": "Qubani ka meetha",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2705685",
+    "food": "Pudding, rice",
+    "dataset": "FNDDS",
+    "grams": 100,
+    "approx": true,
+    "kcal_per_100g": 108,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "rabri",
+  "name": "Rabri",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:OSR025",
+    "food": "Thickened sweetened milk (Rabri)",
+    "dataset": "INDB",
+    "grams": 120,
+    "approx": false,
+    "kcal_per_100g": 103,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "radish",
+  "name": "Radish",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709803",
+    "food": "Radish",
+    "dataset": "FNDDS",
+    "grams": 60,
+    "approx": false,
+    "kcal_per_100g": 16,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "raj kachori",
+  "name": "Raj kachori",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708730",
+    "food": "Samosa",
+    "dataset": "FNDDS",
+    "grams": 120,
+    "approx": true,
+    "kcal_per_100g": 310,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "rajma",
+  "name": "Rajma",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC165",
+    "food": "Kidney bean curry (Rajmah curry)",
+    "dataset": "INDB",
+    "grams": 200,
+    "approx": false,
+    "kcal_per_100g": 144,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "ramen",
+  "name": "Ramen",
+  "cuisine": "Japanese",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709153",
+    "food": "Ramen bowl, NFS",
+    "dataset": "FNDDS",
+    "grams": 500,
+    "approx": false,
+    "kcal_per_100g": 127,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "ras malai",
+  "name": "Ras malai",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:BFP393",
+    "food": "Rasmalai",
+    "dataset": "INDB",
+    "grams": 120,
+    "approx": false,
+    "kcal_per_100g": 136,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "rasgulla",
+  "name": "Rasgulla",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:BFP392",
+    "food": "Rasgulla",
+    "dataset": "INDB",
+    "grams": 100,
+    "approx": false,
+    "kcal_per_100g": 119,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "rava dosa",
+  "name": "Rava dosa",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC147",
+    "food": "Semolina dosa (Suji/Rava dosa)",
+    "dataset": "INDB",
+    "grams": 120,
+    "approx": false,
+    "kcal_per_100g": 227,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "ravioli",
+  "name": "Ravioli",
+  "cuisine": "Italian",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708767",
+    "food": "Ravioli, cheese-filled, no sauce",
+    "dataset": "FNDDS",
+    "grams": 200,
+    "approx": false,
+    "kcal_per_100g": 173,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "red velvet cake",
+  "name": "Red velvet cake",
+  "cuisine": "American",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707884",
+    "food": "Cake or cupcake, red velvet",
+    "dataset": "FNDDS",
+    "grams": 100,
+    "approx": false,
+    "kcal_per_100g": 355,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "rice cooked",
+  "name": "Rice cooked",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708402",
+    "food": "Rice, cooked, NFS",
+    "dataset": "FNDDS",
+    "grams": 180,
+    "approx": false,
+    "kcal_per_100g": 129,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "risotto",
+  "name": "Risotto",
+  "cuisine": "Italian",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709077",
+    "food": "Rice pilaf",
+    "dataset": "FNDDS",
+    "grams": 250,
+    "approx": true,
+    "kcal_per_100g": 137,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "roti canai",
+  "name": "Roti canai",
+  "cuisine": "Malaysian",
+  "sources": [
+   "malaysian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707715",
+    "food": "Bread, paratha",
+    "dataset": "FNDDS",
+    "grams": 90,
+    "approx": false,
+    "kcal_per_100g": 326,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "saag",
+  "name": "Saag",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC217",
+    "food": "Sarson ka saag",
+    "dataset": "INDB",
+    "grams": 200,
+    "approx": false,
+    "kcal_per_100g": 88,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "sabudana khichdi",
+  "name": "Sabudana khichdi",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:OSR099",
+    "food": "Sago khitchdi/khichri (Sabudana khitchdi/khichri)",
+    "dataset": "INDB",
+    "grams": 200,
+    "approx": false,
+    "kcal_per_100g": 187,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "sabudana vada",
+  "name": "Sabudana vada",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709130",
+    "food": "Vada",
+    "dataset": "FNDDS",
+    "grams": 100,
+    "approx": true,
+    "kcal_per_100g": 266,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "samosa",
+  "name": "Samosa",
+  "cuisine": "Indian",
+  "sources": [
+   "food101",
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708730",
+    "food": "Samosa",
+    "dataset": "FNDDS",
+    "grams": 100,
+    "approx": false,
+    "kcal_per_100g": 310,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "sandesh",
+  "name": "Sandesh",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2705700",
+    "food": "Barfi or Burfi, Indian dessert",
+    "dataset": "FNDDS",
+    "grams": 50,
+    "approx": true,
+    "kcal_per_100g": 284,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "sandwich",
+  "name": "Sandwich",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2705794",
+    "food": "Cheese sandwich, NFS",
+    "dataset": "FNDDS",
+    "grams": 120,
+    "approx": false,
+    "kcal_per_100g": 297,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "sashimi",
+  "name": "Sashimi",
+  "cuisine": "Japanese",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2706284",
+    "food": "Fish, salmon, raw",
+    "dataset": "FNDDS",
+    "grams": 100,
+    "approx": false,
+    "kcal_per_100g": 188,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "satay",
+  "name": "Satay",
+  "cuisine": "Malaysian",
+  "sources": [
+   "malaysian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2705970",
+    "food": "Chicken breast, grilled with sauce, skin not eaten",
+    "dataset": "FNDDS",
+    "grams": 120,
+    "approx": true,
+    "kcal_per_100g": 178,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "sattu drink",
+  "name": "Sattu drink",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:OSR002",
+    "food": "Sattu drink",
+    "dataset": "INDB",
+    "grams": 250,
+    "approx": false,
+    "kcal_per_100g": 23,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "scallops",
+  "name": "Scallops",
+  "cuisine": "American",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2706357",
+    "food": "Scallops, grilled",
+    "dataset": "FNDDS",
+    "grams": 120,
+    "approx": false,
+    "kcal_per_100g": 108,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "scrambled eggs",
+  "name": "Scrambled eggs",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707200",
+    "food": "Egg omelet or scrambled egg, made with oil",
+    "dataset": "FNDDS",
+    "grams": 120,
+    "approx": false,
+    "kcal_per_100g": 192,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "seaweed salad",
+  "name": "Seaweed salad",
+  "cuisine": "Japanese",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2710100",
+    "food": "Seaweed, pickled",
+    "dataset": "FNDDS",
+    "grams": 100,
+    "approx": true,
+    "kcal_per_100g": 54,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "seekh kebab",
+  "name": "Seekh kebab",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:BFP199",
+    "food": "Mutton seekh kebab",
+    "dataset": "INDB",
+    "grams": 120,
+    "approx": false,
+    "kcal_per_100g": 134,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "set dosa",
+  "name": "Set dosa",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708347",
+    "food": "Dosa, plain",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 210,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "sev puri",
+  "name": "Sev puri",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708213",
+    "food": "Snack mix",
+    "dataset": "FNDDS",
+    "grams": 60,
+    "approx": true,
+    "kcal_per_100g": 504,
+    "serving_desc": null
+   },
+   {
+    "food_id": "usda:2709795",
+    "food": "Onions, raw",
+    "dataset": "FNDDS",
+    "grams": 20,
+    "approx": false,
+    "kcal_per_100g": 38,
+    "serving_desc": null
+   },
+   {
+    "food_id": "usda:2709719",
+    "food": "Tomatoes, raw",
+    "dataset": "FNDDS",
+    "grams": 20,
+    "approx": false,
+    "kcal_per_100g": 20,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "shankarpali",
+  "name": "Shankarpali",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707964",
+    "food": "Cookie, shortbread",
+    "dataset": "FNDDS",
+    "grams": 40,
+    "approx": true,
+    "kcal_per_100g": 514,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "sheer khurma",
+  "name": "Sheer khurma",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2705685",
+    "food": "Pudding, rice",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": true,
+    "kcal_per_100g": 108,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "sheer korma",
+  "name": "Sheer korma",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2705685",
+    "food": "Pudding, rice",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": true,
+    "kcal_per_100g": 108,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "sheera",
+  "name": "Sheera",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC293",
+    "food": "Semolina halwa (Suji ka halwa)",
+    "dataset": "INDB",
+    "grams": 120,
+    "approx": false,
+    "kcal_per_100g": 226,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "shelled soy bean",
+  "name": "Shelled soy bean",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707436",
+    "food": "Edamame, cooked",
+    "dataset": "FNDDS",
+    "grams": 100,
+    "approx": false,
+    "kcal_per_100g": 140,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "shrikhand",
+  "name": "Shrikhand",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:OSR024",
+    "food": "Sweetened yogurt (Shrikhand)",
+    "dataset": "INDB",
+    "grams": 120,
+    "approx": false,
+    "kcal_per_100g": 107,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "shrimp and grits",
+  "name": "Shrimp and grits",
+  "cuisine": "American",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708369",
+    "food": "Grits, with cheese, fat added",
+    "dataset": "FNDDS",
+    "grams": 200,
+    "approx": false,
+    "kcal_per_100g": 108,
+    "serving_desc": null
+   },
+   {
+    "food_id": "usda:175180",
+    "food": "Crustaceans, shrimp, cooked",
+    "dataset": "SR Legacy",
+    "grams": 85,
+    "approx": false,
+    "kcal_per_100g": 99,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "sohan halwa",
+  "name": "Sohan halwa",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC293",
+    "food": "Semolina halwa (Suji ka halwa)",
+    "dataset": "INDB",
+    "grams": 80,
+    "approx": true,
+    "kcal_per_100g": 226,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "sohan papdi",
+  "name": "Sohan papdi",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2705700",
+    "food": "Barfi or Burfi, Indian dessert",
+    "dataset": "FNDDS",
+    "grams": 40,
+    "approx": true,
+    "kcal_per_100g": 284,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "solkadhi",
+  "name": "Solkadhi",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2705393",
+    "food": "Buttermilk",
+    "dataset": "FNDDS",
+    "grams": 200,
+    "approx": true,
+    "kcal_per_100g": 43,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "soya chaap",
+  "name": "Soya chaap",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:OSR153",
+    "food": "Soya seekh kebab",
+    "dataset": "INDB",
+    "grams": 150,
+    "approx": true,
+    "kcal_per_100g": 115,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "soyabean chunks",
+  "name": "Soyabean chunks",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:BFP204",
+    "food": "Soya chunks korma (Nutrinugget korma)",
+    "dataset": "INDB",
+    "grams": 200,
+    "approx": false,
+    "kcal_per_100g": 131,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "soyabean rice",
+  "name": "Soyabean rice",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709077",
+    "food": "Rice pilaf",
+    "dataset": "FNDDS",
+    "grams": 250,
+    "approx": true,
+    "kcal_per_100g": 137,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "spaghetti bolognese",
+  "name": "Spaghetti bolognese",
+  "cuisine": "Italian",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:BFP155",
+    "food": "Spaghetti bolognese",
+    "dataset": "INDB",
+    "grams": 350,
+    "approx": false,
+    "kcal_per_100g": 97,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "spaghetti carbonara",
+  "name": "Spaghetti carbonara",
+  "cuisine": "Italian",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708861",
+    "food": "Pasta with cream sauce and meat, restaurant",
+    "dataset": "FNDDS",
+    "grams": 300,
+    "approx": true,
+    "kcal_per_100g": 213,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "spinach",
+  "name": "Spinach",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709615",
+    "food": "Spinach, fresh, cooked, no added fat",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 33,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "spring rolls",
+  "name": "Spring rolls",
+  "cuisine": "Chinese",
+  "sources": [
+   "food101",
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708700",
+    "food": "Egg roll, meatless",
+    "dataset": "FNDDS",
+    "grams": 100,
+    "approx": false,
+    "kcal_per_100g": 270,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "sprouts",
+  "name": "Sprouts",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC259",
+    "food": "Sprouted moong salad",
+    "dataset": "INDB",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 38,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "steak",
+  "name": "Steak",
+  "cuisine": "American",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2705833",
+    "food": "Beef, steak, sirloin, lean and fat eaten",
+    "dataset": "FNDDS",
+    "grams": 200,
+    "approx": false,
+    "kcal_per_100g": 262,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "steamed momo",
+  "name": "Steamed momo",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708708",
+    "food": "Wonton, dumpling or pot sticker, steamed",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 113,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "strawberry shortcake",
+  "name": "Strawberry shortcake",
+  "cuisine": "American",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707896",
+    "food": "Cake, strawberry shortcake",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 214,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "stuffed karela",
+  "name": "Stuffed karela",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:BFP604",
+    "food": "Stuffed bittergourd (dry) (Bharwa karela)",
+    "dataset": "INDB",
+    "grams": 120,
+    "approx": false,
+    "kcal_per_100g": 218,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "sunny side up eggs",
+  "name": "Sunny side up eggs",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707158",
+    "food": "Egg, whole, fried with oil",
+    "dataset": "FNDDS",
+    "grams": 100,
+    "approx": false,
+    "kcal_per_100g": 192,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "sushi",
+  "name": "Sushi",
+  "cuisine": "Japanese",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708959",
+    "food": "Sushi, NFS",
+    "dataset": "FNDDS",
+    "grams": 200,
+    "approx": false,
+    "kcal_per_100g": 94,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "sutar feni",
+  "name": "Sutar feni",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708349",
+    "food": "Funnel cake with sugar",
+    "dataset": "FNDDS",
+    "grams": 50,
+    "approx": true,
+    "kcal_per_100g": 353,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "sweet potatoes",
+  "name": "Sweet potatoes",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709700",
+    "food": "Sweet potato, baked, fat added",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 115,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "taco",
+  "name": "Taco",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708514",
+    "food": "Taco, NFS",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 246,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "tacos",
+  "name": "Tacos",
+  "cuisine": "Mexican",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708514",
+    "food": "Taco, NFS",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 246,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "takoyaki",
+  "name": "Takoyaki",
+  "cuisine": "Japanese",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708705",
+    "food": "Wonton, dumpling or pot sticker, fried",
+    "dataset": "FNDDS",
+    "grams": 120,
+    "approx": true,
+    "kcal_per_100g": 192,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "thali",
+  "name": "Thali",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708402",
+    "food": "Rice, cooked, NFS",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 129,
+    "serving_desc": null
+   },
+   {
+    "food_id": "usda:2707427",
+    "food": "Dal",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 145,
+    "serving_desc": null
+   },
+   {
+    "food_id": "indb:ASC096",
+    "food": "Chapati/Roti",
+    "dataset": "INDB",
+    "grams": 40,
+    "approx": false,
+    "kcal_per_100g": 202,
+    "serving_desc": null
+   },
+   {
+    "food_id": "usda:2710067",
+    "food": "Vegetable curry",
+    "dataset": "FNDDS",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 86,
+    "serving_desc": null
+   },
+   {
+    "food_id": "usda:2705414",
+    "food": "Yogurt, NFS",
+    "dataset": "FNDDS",
+    "grams": 80,
+    "approx": false,
+    "kcal_per_100g": 94,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "thukpa",
+  "name": "Thukpa",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709145",
+    "food": "Soup, noodle, NFS",
+    "dataset": "FNDDS",
+    "grams": 500,
+    "approx": true,
+    "kcal_per_100g": 90,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "tiramisu",
+  "name": "Tiramisu",
+  "cuisine": "Italian",
+  "sources": [
+   "food101",
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2705702",
+    "food": "Tiramisu",
+    "dataset": "FNDDS",
+    "grams": 120,
+    "approx": false,
+    "kcal_per_100g": 353,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "toast",
+  "name": "Toast",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707599",
+    "food": "Bread, white, toasted",
+    "dataset": "FNDDS",
+    "grams": 50,
+    "approx": false,
+    "kcal_per_100g": 293,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "tomato",
+  "name": "Tomato",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709719",
+    "food": "Tomatoes, raw",
+    "dataset": "FNDDS",
+    "grams": 100,
+    "approx": false,
+    "kcal_per_100g": 20,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "toor daal",
+  "name": "Toor daal",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707427",
+    "food": "Dal",
+    "dataset": "FNDDS",
+    "grams": 200,
+    "approx": false,
+    "kcal_per_100g": 145,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "tuna tartare",
+  "name": "Tuna tartare",
+  "cuisine": "American",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2706308",
+    "food": "Fish, tuna, raw",
+    "dataset": "FNDDS",
+    "grams": 100,
+    "approx": false,
+    "kcal_per_100g": 109,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "turnip",
+  "name": "Turnip",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2710002",
+    "food": "Turnip, cooked",
+    "dataset": "FNDDS",
+    "grams": 100,
+    "approx": false,
+    "kcal_per_100g": 54,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "unni appam",
+  "name": "Unni appam",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708069",
+    "food": "Doughnut holes",
+    "dataset": "FNDDS",
+    "grams": 60,
+    "approx": true,
+    "kcal_per_100g": 426,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "uttapam",
+  "name": "Uttapam",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:BFP152",
+    "food": "Uttapam",
+    "dataset": "INDB",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 256,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "vada pav",
+  "name": "Vada pav",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709510",
+    "food": "Potato patty",
+    "dataset": "FNDDS",
+    "grams": 100,
+    "approx": true,
+    "kcal_per_100g": 171,
+    "serving_desc": null
+   },
+   {
+    "food_id": "usda:2707657",
+    "food": "Roll, white, hamburger bun",
+    "dataset": "FNDDS",
+    "grams": 60,
+    "approx": false,
+    "kcal_per_100g": 267,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "vegetable polav",
+  "name": "Vegetable polav",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:ASC115",
+    "food": "Mixed vegetable pulao",
+    "dataset": "INDB",
+    "grams": 250,
+    "approx": false,
+    "kcal_per_100g": 113,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "veggie burger",
+  "name": "Veggie burger",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2707481",
+    "food": "Veggie burger, on bun",
+    "dataset": "FNDDS",
+    "grams": 160,
+    "approx": false,
+    "kcal_per_100g": 224,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "vermicelli upma",
+  "name": "Vermicelli upma",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "indb:BFP040",
+    "food": "Vermicelli upma (Semiya/Seviyan upma)",
+    "dataset": "INDB",
+    "grams": 200,
+    "approx": false,
+    "kcal_per_100g": 149,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "waffle",
+  "name": "Waffle",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708312",
+    "food": "Waffle, NFS",
+    "dataset": "FNDDS",
+    "grams": 75,
+    "approx": false,
+    "kcal_per_100g": 309,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "waffles",
+  "name": "Waffles",
+  "cuisine": "American",
+  "sources": [
+   "food101"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708312",
+    "food": "Waffle, NFS",
+    "dataset": "FNDDS",
+    "grams": 75,
+    "approx": false,
+    "kcal_per_100g": 309,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "watermelon",
+  "name": "Watermelon",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2709270",
+    "food": "Watermelon, raw",
+    "dataset": "FNDDS",
+    "grams": 200,
+    "approx": false,
+    "kcal_per_100g": 30,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "xoi xeo",
+  "name": "Xoi xeo",
+  "cuisine": "Vietnamese",
+  "sources": [
+   "vietnamese"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:2708422",
+    "food": "Rice, white, cooked, glutinous",
+    "dataset": "FNDDS",
+    "grams": 200,
+    "approx": true,
+    "kcal_per_100g": 96,
+    "serving_desc": null
+   }
+  ]
+ },
+ {
+  "key": "yam",
+  "name": "Yam",
+  "cuisine": "Indian",
+  "sources": [
+   "indian"
+  ],
+  "parts": [
+   {
+    "food_id": "usda:170072",
+    "food": "Yam, cooked, boiled, drained, or baked, without salt",
+    "dataset": "SR Legacy",
+    "grams": 150,
+    "approx": false,
+    "kcal_per_100g": 116,
+    "serving_desc": null
+   }
+  ]
+ }
+]

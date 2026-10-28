@@ -1,6 +1,7 @@
 // All Grok (xAI) traffic goes through this file. The API key is read from the
 // environment on the server and never sent to the browser.
 import { db, dayKey, monthKey } from './db.js';
+import { USDA_AVAILABLE, findCandidates, getFood, nutrientsFor, micronutrientsFor, sourceOf, computeTotals } from './foods.js';
 
 const API_URL = 'https://api.x.ai/v1/chat/completions';
 const cfg = {
@@ -21,8 +22,8 @@ if (!cfg.key || !cfg.key.startsWith('xai-')) {
 export class BudgetError extends Error {}
 
 export function usageSummary() {
-  const today = db.prepare('SELECT COUNT(*) AS calls, COALESCE(SUM(cost_usd),0) AS cost FROM api_usage WHERE day = ?').get(dayKey());
-  const month = db.prepare('SELECT COUNT(*) AS calls, COALESCE(SUM(cost_usd),0) AS cost FROM api_usage WHERE month = ?').get(monthKey());
+  const today = db.prepare("SELECT COUNT(*) AS calls FROM api_usage WHERE day = ? AND kind != 'match'").get(dayKey());
+  const month = db.prepare("SELECT COUNT(*) FILTER (WHERE kind != 'match') AS calls, COALESCE(SUM(cost_usd),0) AS cost FROM api_usage WHERE month = ?").get(monthKey());
   return {
     model: cfg.model,
     today_calls: today.calls,
@@ -74,7 +75,9 @@ async function callGrok(body, kind) {
     const msg = {
       400: 'The AI could not process this image. Try a clearer photo.',
       401: 'The API key was rejected. Check XAI_API_KEY in .env.',
-      403: 'The API key does not have access to this model or has no credits.',
+      403: /credit|spending limit/i.test(JSON.stringify(data))
+        ? 'The xAI account is out of credits or reached its spending limit. Add credits at console.x.ai.'
+        : 'The API key does not have access to this model.',
       429: 'The AI service is rate-limiting us. Wait a minute and try again.',
     }[res.status] ?? `The AI service returned an error (${res.status}).`;
     console.error(`[xai] ${res.status}`, data?.error ?? data?.code ?? '');
@@ -89,9 +92,10 @@ const num = { type: 'number' };
 const ITEM_SCHEMA = {
   type: 'object',
   additionalProperties: false,
-  required: ['name', 'portion', 'estimated_grams', 'calories', 'protein_g', 'carbs_g', 'fat_g', 'saturated_fat_g', 'fiber_g', 'sugar_g', 'sodium_mg', 'cholesterol_mg'],
+  required: ['name', 'usda_query', 'portion', 'estimated_grams', 'calories', 'protein_g', 'carbs_g', 'fat_g', 'saturated_fat_g', 'fiber_g', 'sugar_g', 'sodium_mg', 'cholesterol_mg'],
   properties: {
     name: { type: 'string' },
+    usda_query: { type: 'string', description: 'Search words in USDA FoodData Central naming, e.g. "rice white cooked", "chicken curry", "bread naan", "bacon lettuce tomato sandwich".' },
     portion: { type: 'string', description: 'Human-readable portion, e.g. "1 cup", "2 slices"' },
     estimated_grams: num, calories: num, protein_g: num, carbs_g: num, fat_g: num,
     saturated_fat_g: num, fiber_g: num, sugar_g: num, sodium_mg: num, cholesterol_mg: num,
@@ -99,7 +103,7 @@ const ITEM_SCHEMA = {
 };
 
 // Bump when the prompt/schema changes so old cached answers are not reused.
-export const PROMPT_VERSION = 'v3';
+export const PROMPT_VERSION = 'v4';
 
 // Field order matters: the model "looks" (observations) before it estimates numbers,
 // which noticeably improves portion and calorie accuracy on a non-reasoning model.
@@ -151,6 +155,8 @@ METHOD (follow in order):
 2. WEIGH: Estimate the grams of each item.
 3. CALCULATE: Nutrients = (reference value per 100 g, from USDA / IFCT / national food tables) x grams / 100. Include cooking oil, butter, ghee, sauces and dressings that are typical for the dish even if not visible, as their own item or inside the item.
 4. CHECK: Each item's calories must roughly equal 4 x protein + 4 x carbs + 9 x fat. Fix the numbers if they don't match.
+5. LOOKUP: For each item give usda_query, the words a USDA FoodData Central entry for it would use (food, then form or cooking method). The server looks up lab-measured nutrition from the USDA database with it; your own numbers are only a fallback.
+Keep standard dishes as one item when USDA lists the dish (cheeseburger, biryani, chicken curry, pizza slice); split plates of separate foods (rice, dal, roti, curry) into items.
 
 HEALTH SCORE RUBRIC (be consistent; start at 5):
 +1 to +2: vegetables or fruit make up a good share of the plate
@@ -180,13 +186,8 @@ const round = (n, d = 0) => { const f = 10 ** d; return Math.round((Number(n) ||
 const NUTRIENTS = ['calories', 'protein_g', 'carbs_g', 'fat_g', 'saturated_fat_g', 'fiber_g', 'sugar_g', 'sodium_mg', 'cholesterol_mg'];
 const ALCOHOL = /\b(beer|wine|vodka|whisk(e)?y|rum|gin|cocktail|liquor|sake|cider|champagne|tequila)\b/i;
 
-// Totals are computed here, not by the model: cheaper output and always consistent.
-export function computeTotals(items) {
-  const totals = Object.fromEntries(NUTRIENTS.map((k) => [k, 0]));
-  for (const it of items) for (const k of NUTRIENTS) totals[k] += Number(it[k]) || 0;
-  for (const k of NUTRIENTS) totals[k] = round(totals[k], k === 'calories' || k.endsWith('_mg') ? 0 : 1);
-  return totals;
-}
+// Totals are computed in foods.js (shared with the free local engine).
+export { computeTotals };
 
 // Second-opinion math check: if an item's calories disagree with its own macros by more
 // than 25%, trust the macros (4/4/9 rule). Alcohol has its own calories, so skip drinks.
@@ -203,6 +204,7 @@ function sanitize(a) {
   const clamp = (n, max) => Math.min(Math.max(Number(n) || 0, 0), max);
   const items = (Array.isArray(a.items) ? a.items : []).slice(0, 15).map((it) => fixCalories({
     name: String(it.name ?? 'Item').slice(0, 80),
+    usda_query: String(it.usda_query ?? '').slice(0, 80),
     portion: String(it.portion ?? '').slice(0, 60),
     estimated_grams: round(clamp(it.estimated_grams, 5000)),
     ...Object.fromEntries(NUTRIENTS.map((k) => [k, round(clamp(it[k], k.endsWith('_mg') ? 20000 : 5000), 1)])),
@@ -257,7 +259,84 @@ export async function analyzeFoodImage(dataUrl, note) {
   }, 'analyze');
   let parsed;
   try { parsed = JSON.parse(text); } catch { throw new Error('The AI returned an unreadable answer. Please try again.'); }
-  return { analysis: sanitize(parsed), usage };
+  const analysis = sanitize(parsed);
+  if (analysis.is_food && USDA_AVAILABLE) await groundInUsda(analysis);
+  return { analysis, usage };
+}
+
+// ---------- USDA grounding: AI sees the food and its size, the dataset supplies the numbers ----------
+
+const MATCH_SCHEMA = {
+  type: 'object', additionalProperties: false, required: ['matches'],
+  properties: {
+    matches: {
+      type: 'array',
+      items: {
+        type: 'object', additionalProperties: false, required: ['item', 'fdc_id'],
+        properties: { item: { type: 'integer' }, fdc_id: { type: 'integer', description: '0 when no candidate is the same food' } },
+      },
+    },
+  },
+};
+
+const MATCH_PROMPT = `You match foods seen in a meal photo to USDA FoodData Central entries.
+For each item pick the ONE candidate that is the same food in the same form (cooked/raw, fried/plain, with or without sauce), or its closest true equivalent.
+Prefer FNDDS entries for dishes as eaten. Use kcal_per_100g as a sanity check.
+Answer fdc_id 0 if no candidate is really the same food. Never pick a different food just because words overlap ("rice pudding" is not "rice", "chicken broth" is not "chicken curry").`;
+
+async function groundInUsda(analysis) {
+  const items = analysis.items.map((it, i) => ({ i, it, candidates: findCandidates([it.usda_query, it.name]) }));
+  const askable = items.filter((x) => x.candidates.length && x.it.estimated_grams > 0);
+  if (!askable.length) return;
+
+  let matches = [];
+  try {
+    const { content } = await callGrok({
+      max_tokens: 300,
+      temperature: 0,
+      messages: [
+        { role: 'system', content: MATCH_PROMPT },
+        { role: 'user', content: JSON.stringify(askable.map(({ i, it, candidates }) => ({
+          item: i, name: it.name, portion: it.portion,
+          candidates: candidates.map((c) => ({ fdc_id: c.fdc_id, description: c.description, dataset: c.dataset, kcal_per_100g: Math.round(c.kcal) })),
+        }))) },
+      ],
+      response_format: { type: 'json_schema', json_schema: { name: 'usda_match', strict: true, schema: MATCH_SCHEMA } },
+    }, 'match');
+    matches = JSON.parse(content).matches ?? [];
+  } catch (err) {
+    console.warn('[usda] matching failed, keeping AI estimates:', err.message);
+    return;
+  }
+
+  const parts = [];
+  for (const { item, fdc_id } of matches) {
+    const entry = askable.find((x) => x.i === item);
+    // Only accept an id that was actually offered for this item.
+    if (!entry || !fdc_id || !entry.candidates.some((c) => c.fdc_id === fdc_id)) continue;
+    const food = getFood(fdc_id);
+    const it = analysis.items[item];
+    Object.assign(it, nutrientsFor(food, it.estimated_grams), {
+      corrected: false,
+      source: sourceOf(food),
+    });
+    parts.push({ food, grams: it.estimated_grams });
+  }
+
+  const matched = analysis.items.filter((it) => it.source).length;
+  analysis.data_sources = { matched, total: analysis.items.length, database: 'USDA FoodData Central' };
+  if (!matched) return;
+  analysis.totals = computeTotals(analysis.items);
+  const spread = { high: 0.1, medium: 0.2, low: 0.3 }[analysis.confidence];
+  const to10 = (n) => Math.round(n / 10) * 10;
+  analysis.calorie_range = [to10(analysis.totals.calories * (1 - spread)), to10(analysis.totals.calories * (1 + spread))];
+  analysis.calories_corrected = analysis.items.some((it) => it.corrected);
+  // Vitamins & minerals from the dataset when every item was matched; otherwise the AI's list.
+  if (matched === analysis.items.length) {
+    const micros = micronutrientsFor(parts);
+    if (micros.length) analysis.micronutrients = micros;
+    analysis.micronutrients_source = 'usda';
+  }
 }
 
 // ---------- Daily AI coach (text only, very cheap) ----------

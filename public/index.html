@@ -114,7 +114,7 @@
                   <svg><use href="#i-upload"/></svg> <span class="touch-only">Gallery</span><span class="desktop-only">Choose photo</span>
                 </label>
               </div>
-              <label class="field">
+              <label class="field" id="note-field">
                 <span>Add a note <small>(optional, helps accuracy)</small></span>
                 <input id="note" type="text" maxlength="200" placeholder="e.g. cooked in ghee, half portion, brown rice">
               </label>
@@ -139,9 +139,9 @@
               <div class="loading-photo"><img id="loading-img" alt=""><div class="scanline"></div></div>
               <ol class="steps" id="steps">
                 <li>Looking at your photo</li>
-                <li>Identifying each food</li>
-                <li>Estimating portions</li>
-                <li>Calculating nutrition</li>
+                <li>Recognising the dish</li>
+                <li>Looking up nutrition data</li>
+                <li>Scoring the meal</li>
               </ol>
             </div>
 
@@ -174,7 +174,7 @@
           <div class="today-side">
             <div class="card coach">
               <div class="card-head">
-                <h2><svg><use href="#i-spark"/></svg> AI Coach</h2>
+                <h2><svg><use href="#i-spark"/></svg> Daily coach</h2>
                 <button id="insight-btn" class="btn small">Get advice</button>
               </div>
               <div id="insight" class="insight muted">Get quick feedback on your day so far and a tip for your next meal.</div>
@@ -236,14 +236,14 @@
     </nav>
   </div>
 
-  <!-- Shown only when the app is opened from another device in phone-access mode -->
+  <!-- Shown when this device hasn't logged in yet (phone access or deployed app) -->
   <div id="pin-screen" class="pin-screen" hidden>
     <form id="pin-form" class="card pin-card" aria-labelledby="pin-title">
       <div class="brand"><span class="logo">🥗</span><span>NutriLens</span><span class="ai-badge">AI</span></div>
-      <h1 id="pin-title">Enter your PIN</h1>
-      <p class="lede">This keeps your AI credits safe from others on your Wi-Fi. You only need to do this once on this device.</p>
+      <h1 id="pin-title">Enter your access code</h1>
+      <p class="lede">This keeps your NutriLens private and your AI credits safe. You only need to do this once on each device.</p>
       <label class="field">
-        <span>PIN</span>
+        <span>Access code</span>
         <input id="pin-input" type="password" autocomplete="current-password" required>
       </label>
       <button class="btn primary block lg" type="submit"><svg><use href="#i-check"/></svg> Unlock</button>

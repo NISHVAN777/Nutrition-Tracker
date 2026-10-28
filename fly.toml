@@ -1,0 +1,49 @@
+# Fly.io configuration for NutriLens: small setup, sleeps when idle.
+app = "nutrilens"
+primary_region = "sin"          # Singapore: closest Fly region to India
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  NODE_ENV = "production"
+  PORT = "8080"
+  DATA_DIR = "/data"
+  TZ = "Asia/Kolkata"           # "Today" resets at Indian midnight
+  AI_ENGINE = "local"           # free self-hosted food model (no API costs); "grok" = paid xAI
+  XAI_MODEL = "grok-4.20-0309-non-reasoning"
+  PRICE_INPUT_PER_M = "1.25"
+  PRICE_OUTPUT_PER_M = "2.50"
+  DAILY_AI_LIMIT = "40"
+  MONTHLY_BUDGET_USD = "3.00"
+  PER_MINUTE_LIMIT = "6"
+  REQUIRE_LOGIN = "false"        # open access; set to "true" to require the ACCESS_PIN code
+  # Secrets (set with `fly secrets set`, never in this file): XAI_API_KEY, ACCESS_PIN
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = "stop"   # stop when nobody is using it (pay only while running)
+  auto_start_machines = true    # wake up on the next request (~1-2 s)
+  min_machines_running = 0
+
+  [http_service.concurrency]
+    type = "requests"
+    soft_limit = 20
+    hard_limit = 40
+
+  [[http_service.checks]]
+    method = "GET"
+    path = "/healthz"
+    interval = "30s"
+    timeout = "5s"
+    grace_period = "10s"
+
+# SQLite database + meal photos persist here across deploys and restarts.
+[[mounts]]
+  source = "nutrilens_data"
+  destination = "/data"
+
+[[vm]]
+  size = "shared-cpu-1x"
+  memory = "512mb"               # the food-recognition model needs ~300-380 MB

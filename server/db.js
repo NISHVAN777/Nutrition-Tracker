@@ -58,6 +58,12 @@ db.exec(`
     key   TEXT PRIMARY KEY,
     value TEXT NOT NULL
   );
+
+  -- Login sessions (only the SHA-256 of each token is stored).
+  CREATE TABLE IF NOT EXISTS sessions (
+    token_hash TEXT PRIMARY KEY,
+    expires    INTEGER NOT NULL
+  );
 `);
 
 export const DEFAULT_GOALS = {

@@ -1,15 +1,27 @@
 {
   "name": "nutrilens",
   "version": "1.0.0",
-  "description": "AI-powered nutrition tracker: snap a photo of food, get nutrition facts.",
+  "description": "Free, self-hosted AI nutrition tracker: snap a photo of food, get nutrition from USDA and Indian datasets.",
   "type": "module",
   "private": true,
   "scripts": {
-    "start": "node --disable-warning=ExperimentalWarning --env-file=.env server/index.js",
-    "dev": "node --watch --disable-warning=ExperimentalWarning --env-file=.env server/index.js"
+    "prestart": "node scripts/fetch-model.mjs",
+    "start": "node --disable-warning=ExperimentalWarning --env-file-if-exists=.env server/index.js",
+    "dev": "node --watch --disable-warning=ExperimentalWarning --env-file-if-exists=.env server/index.js",
+    "fetch-model": "node scripts/fetch-model.mjs",
+    "ml:download": "node scripts/fetch-model.mjs --training && node scripts/ml/download-indian-images.mjs 50",
+    "ml:embed": "node scripts/ml/embed.mjs",
+    "ml:train": "python scripts/ml/train.py",
+    "ml:labels": "node --disable-warning=ExperimentalWarning scripts/ml/build-labels.mjs"
   },
-  "engines": { "node": ">=22.13" },
+  "engines": {
+    "node": ">=22.13"
+  },
   "dependencies": {
+    "@huggingface/transformers": "^3.8.1",
     "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "hyparquet": "^1.31.5"
   }
 }

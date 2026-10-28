@@ -1,0 +1,13 @@
+# Keep secrets, local data and dev files out of the image
+.env
+.env.*
+!.env.example
+data/
+node_modules/
+.git/
+.claude/
+docs/
+*.log
+start.bat
+Dockerfile
+fly.toml
