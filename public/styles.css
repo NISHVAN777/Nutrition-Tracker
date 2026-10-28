@@ -748,6 +748,17 @@ body[data-engine="local"] #note-field { display: none; }
 .food-row-actions { display: flex; gap: 6px; flex: none; }
 input[type=search] { width: 100%; font: inherit; font-size: 16px; color: var(--text); background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 12px 14px; }
 
+/* ============ Simple view ============ */
+.result.simple .adv, .result.simple .report-nav { display: none !important; }
+.result.simple .report-nav + .block, .result.simple #sec-energy { border-top: 0; }
+.more-toggle { margin-top: 22px; flex-direction: column; gap: 2px; padding: 14px 16px; border-style: dashed; }
+.more-toggle small { font-size: 12px; font-weight: 500; color: var(--muted); }
+.sure { display: inline-block; margin-bottom: 10px; padding: 5px 11px; border-radius: 99px; font-size: 13px; font-weight: 700;
+  color: var(--tone); background: color-mix(in srgb, var(--tone) 13%, transparent); }
+.alts.unsure { background: color-mix(in srgb, var(--meh) 12%, var(--surface-2)); border: 1px solid color-mix(in srgb, var(--meh) 35%, transparent); }
+.alts.unsure .alts-label { color: var(--text); }
+.review .alts.unsure { margin: 0 0 14px; }
+
 /* ============ Phone-first touches ============ */
 html { -webkit-tap-highlight-color: transparent; }
 button, .btn, .tab, label, select, summary { touch-action: manipulation; }

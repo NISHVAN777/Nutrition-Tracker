@@ -22,7 +22,15 @@ if (ENGINE === 'local' && !VISION_AVAILABLE) {
   process.exit(1);
 }
 const LABELS = new Map(JSON.parse(fs.readFileSync(path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'ml', 'labels.json'), 'utf8')).map((l) => [l.key, l]));
-const CLASSIFIER_VERSION = crypto.createHash('sha256').update(fs.readFileSync(path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'ml', 'classifier.f32'))).digest('hex').slice(0, 12);
+// Cached scan results are tied to the model, labels and report rules: change any and scans refresh.
+const HERE = path.dirname(fileURLToPath(import.meta.url));
+const CLASSIFIER_VERSION = crypto.createHash('sha256')
+  .update(fs.readFileSync(path.join(HERE, '..', 'ml', 'classifier.f32')))
+  .update(fs.readFileSync(path.join(HERE, '..', 'ml', 'labels.json')))
+  .update(fs.readFileSync(path.join(HERE, 'rules.js')))
+  .update(fs.readFileSync(path.join(HERE, 'compose.js')))
+  .update(fs.readFileSync(path.join(HERE, 'index.js'))) // includes the dish-vs-name-matching decision
+  .digest('hex').slice(0, 12);
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const PORT = Number(process.env.PORT ?? 8787);
@@ -203,7 +211,9 @@ async function analyzeLocally(buf) {
     return { engine: 'local', is_food: false, message: 'This doesn’t look like food. Try a clear photo of your meal, taken from above.', items: [], totals: computeTotals([]) };
   }
   const top = r.dishes[0];
-  const useDish = top.probability >= 0.3 && top.parts.length;
+  // The classifier beats name matching on real food photos even when unsure (31% right below 30% confidence),
+  // so name matching is only used when it is really lost (e.g. not a dish it was trained on).
+  const useDish = top.probability >= 0.18 && top.parts.length;
   const confidence = useDish ? (top.probability >= 0.7 ? 'high' : top.probability >= 0.45 ? 'medium' : 'low') : 'low';
   const others = r.dishes.slice(useDish ? 1 : 0).filter((d) => d.probability >= 0.02 && d.parts.length);
   const alternatives = [

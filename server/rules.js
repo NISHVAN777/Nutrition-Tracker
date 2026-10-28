@@ -165,7 +165,7 @@ export function describeMeal({ mealName, items, totals: t, goals }) {
               : 'Lunch or dinner';
 
   const overall = [
-    `${mealName} scores ${score}/10 for nutrition (Nutri-Score ${ns.grade}, adjusted for the portion and cooking).`,
+    `${mealName} scores ${score} out of 10 for how healthy it is.`,
     pros[0] ? `On the plus side: ${pros.slice(0, 2).map((p) => p[2].split(':')[0].toLowerCase()).join(' and ')}.` : '',
     cons[0] ? `Keep an eye on: ${cons.slice(0, 2).map((c) => c[2].split(':')[0].toLowerCase()).join(' and ')}.` : 'Nothing stands out as a concern.',
     `Best for: ${bestFor.toLowerCase()}.`,

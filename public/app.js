@@ -265,19 +265,19 @@ function scaled(totals, s) {
 const fdcLink = (src) => `https://fdc.nal.usda.gov/food-details/${encodeURIComponent(src.fdc_id)}/nutrients`;
 function sourceBadge(it) {
   if (!it.source) return '<span class="src ai" title="No matching food in the database, so the AI estimated these numbers">✨ AI estimate</span>';
-  const src = it.source.dataset === 'INDB' ? 'INDB' : 'USDA';
+  const src = it.source.dataset === 'INDB' ? 'Indian Nutrient Databank' : 'USDA FoodData Central';
   const href = it.source.url ?? fdcLink(it.source);
   return it.source.approx
-    ? `<a class="src approx" href="${esc(href)}" target="_blank" rel="noopener noreferrer" title="No exact entry for this dish: nutrition of a similar food is used">≈ Similar: ${esc(it.source.description)}</a>`
-    : `<a class="src usda" href="${esc(href)}" target="_blank" rel="noopener noreferrer" title="Open this food in its dataset">🧪 ${src}: ${esc(it.source.description)}</a>`;
+    ? `<a class="src approx" href="${esc(href)}" target="_blank" rel="noopener noreferrer" title="No exact entry for this dish, so a similar food is used: ${esc(it.source.description)} (${src})">≈ Similar food used: ${esc(it.source.description)}</a>`
+    : `<a class="src usda" href="${esc(href)}" target="_blank" rel="noopener noreferrer" title="${esc(it.source.description)}, from ${src}. Tap to see the source.">✓ Checked nutrition data</a>`;
 }
 function sourceSummary(a) {
   const ds = a.data_sources;
   if (!ds || !ds.total) return null;
   if (a.engine === 'local') {
     return ds.approximate
-      ? { cls: 'good', text: `🧪 Nutrition from datasets · ≈ ${ds.approximate} similar ${ds.approximate === 1 ? 'dish' : 'dishes'}` }
-      : { cls: 'good', text: '🧪 Nutrition from USDA / INDB lab data' };
+      ? { cls: 'good', text: `✓ Official food data · ≈ similar food used for ${ds.approximate === ds.total ? 'this dish' : `${ds.approximate} item${ds.approximate === 1 ? '' : 's'}`}` }
+      : { cls: 'good', text: '✓ Nutrition from official food databases' };
   }
   if (ds.matched === ds.total) return { cls: 'good', text: `🧪 Nutrition from USDA lab data` };
   if (ds.matched === 0) return { cls: '', text: '✨ Nutrition estimated by AI' };
@@ -333,6 +333,15 @@ const CONFIDENCE_LOCAL = {
   low: 'Not sure. Pick the right food from the suggestions, or search for it.',
 };
 
+// ---------- Simple view by default; all details one tap away (remembered) ----------
+let detailed = false;
+try { detailed = localStorage.getItem('nl-detailed') === '1'; } catch { /* storage blocked */ }
+const SURE = {
+  high: (n) => ({ cls: 'great', text: `✓ We're quite sure this is ${n}` }),
+  medium: (n) => ({ cls: 'meh', text: `We think this is ${n}` }),
+  low: () => ({ cls: 'bad', text: 'Not sure about this one. Please check it below' }),
+};
+
 // ---------- Corrections: pick another dish, add or remove foods (free, local engine) ----------
 const partsOf = (a) => a.items.map((it) => ({ food_id: it.source?.id, grams: it.estimated_grams, approx: Boolean(it.source?.approx), name: it.name }));
 async function compose(body) {
@@ -347,7 +356,8 @@ async function compose(body) {
 }
 function alternativesHtml(a, limit = 7) {
   if (a.engine !== 'local' || !a.alternatives?.length) return '';
-  return `<div class="alts"><span class="alts-label">Not right? It might be:</span>
+  const unsure = a.confidence !== 'high';
+  return `<div class="alts ${unsure ? 'unsure' : ''}"><span class="alts-label">${unsure ? 'Is this right? It could also be:' : 'Not right? Tap the right one:'}</span>
     <div class="alt-chips">${a.alternatives.slice(0, limit).map((x) => `<button type="button" class="alt-chip" data-choice="${esc(x.choice)}">${esc(x.name)}${x.probability ? ` <small>${x.probability}%</small>` : ''}</button>`).join('')}
     <button type="button" class="alt-chip search" data-open-search>🔍 Search…</button></div></div>`;
 }
@@ -427,22 +437,22 @@ function renderResult() {
 
   el.innerHTML = `
     <div class="result-head">
-      <div><div class="eyebrow">Full nutrition report</div><h2>${esc(a.meal_name)}</h2></div>
+      <div><div class="eyebrow">${detailed ? 'Full nutrition report' : 'Your meal'}</div><h2>${esc(a.meal_name)}</h2></div>
     </div>
     <p class="result-intro">${esc(a.description)}</p>
     <div>
       <div class="chips">
         ${a.cuisine ? `<span class="chip">🌍 ${esc(a.cuisine)}</span>` : ''}
-        ${sourceSummary(a) ? `<span class="chip ${sourceSummary(a).cls}">${sourceSummary(a).text}</span>` : ''}
+        ${sourceSummary(a) ? `<span class="chip adv ${sourceSummary(a).cls}">${sourceSummary(a).text}</span>` : ''}
         ${current.cached ? '<span class="chip good">⚡ Saved result · no AI cost</span>' : ''}
-        ${a.nutri_score ? `<span class="chip">Nutri-Score ${esc(a.nutri_score.grade)}</span>` : ''}
+        ${a.nutri_score ? `<span class="chip adv">Nutri-Score ${esc(a.nutri_score.grade)}</span>` : ''}
         ${a.diet_tags.map((d) => `<span class="chip good">${esc(d)}</span>`).join('')}
       </div>
     </div>
 
     ${alternativesHtml(a)}
 
-    <section id="sec-score" class="block verdict ${band.cls}">
+    <section id="sec-score" class="block verdict adv ${band.cls}">
       <div class="verdict-head">
         <div class="score-badge"><b>${a.health_score}</b><small>out of 10</small></div>
         <div>
@@ -469,7 +479,7 @@ function renderResult() {
         <p class="hint">Calories are the energy your body gets from food. On a ${fmt(g.calories)} kcal day, a main meal is usually about ${fmt(mealLow)}–${fmt(mealHigh)} kcal.</p>` : ''}
     </section>
 
-    <section id="sec-nutrients" class="block">
+    <section id="sec-nutrients" class="block adv">
       <h3>🍽️ The 3 main nutrients</h3>
       <div class="macro-list">
         ${Object.entries(MACRO_INFO).map(([k, info]) => `
@@ -491,7 +501,7 @@ function renderResult() {
       </div>
     </section>
 
-    <section id="sec-limits" class="block">
+    <section id="sec-limits" class="block adv">
       <h3>🔍 Good to get more / Good to limit</h3>
       <p class="hint rule">How to read: <b>Low</b> = 5% or less of your daily need, <b>High</b> = 20% or more.
         High is great for fiber, but for fat, sugar and salt it means “eat less of this”.</p>
@@ -541,7 +551,7 @@ function renderResult() {
       </details>
     </section>
 
-    ${a.micronutrients.length ? `<section id="sec-vitamins" class="block">
+    ${a.micronutrients.length ? `<section id="sec-vitamins" class="block adv">
       <h3>💊 Vitamins & minerals</h3>
       <p class="hint">Small nutrients your body needs every day. “% daily” shows how much of a day’s need this meal covers.${a.micronutrients_source === 'usda' ? ' Calculated from USDA lab data.' : ''}</p>
       ${a.micronutrients.map((m) => `<div class="plate-item">
@@ -561,7 +571,7 @@ function renderResult() {
       <ul class="tips">${list(a.tips)}</ul>
     </section>` : ''}
 
-    <section id="sec-accuracy" class="block accuracy">
+    <section id="sec-accuracy" class="block accuracy adv">
       <h3>🎯 How accurate is this?</h3>
       <div class="nutrient-top"><b>${a.engine === 'local' ? 'Match confidence' : 'AI confidence'}</b><span class="level ${{ high: 'great', medium: 'meh', low: 'bad' }[a.confidence]}">${esc(a.confidence)}</span></div>
       <p class="hint">${(a.engine === 'local' ? CONFIDENCE_LOCAL : CONFIDENCE_INFO)[a.confidence]}</p>
@@ -585,6 +595,10 @@ function renderResult() {
       </div>
       <p class="sub">Tell the AI what to fix. Re-analyzing uses one AI scan.</p>`}
     </section>
+
+    <button type="button" class="btn block more-toggle" aria-expanded="${detailed}">
+      ${detailed ? 'Show less' : 'Show all nutrition details'}<small>${detailed ? 'Back to the simple view' : 'Health score explained, protein, carbs & fat, salt & sugar, vitamins, accuracy'}</small>
+    </button>
 
     <div class="log-bar">
       <div class="stepper" aria-label="Servings">
@@ -615,6 +629,13 @@ function renderResult() {
   bindCorrections($('#result'));
   bindFoodEditor();
   $('#log-btn').addEventListener('click', logMeal);
+  el.classList.toggle('simple', !detailed);
+  el.querySelector('.more-toggle').addEventListener('click', () => {
+    detailed = !detailed;
+    try { localStorage.setItem('nl-detailed', detailed ? '1' : '0'); } catch { /* storage blocked */ }
+    renderResult();
+    if (detailed) scrollToEl($('#sec-score'));
+  });
   buildReportNav();
   renderReview();
 }
@@ -683,6 +704,8 @@ function renderReview() {
       <div class="review-score" title="Health score"><b>${a.health_score}</b><small>out of 10</small></div>
     </div>
     <div class="review-body">
+      ${a.engine === 'local' && SURE[a.confidence] ? `<div class="sure ${SURE[a.confidence](a.meal_name).cls}">${esc(SURE[a.confidence](a.meal_name).text)}</div>` : ''}
+      ${a.confidence !== 'high' ? alternativesHtml(a, 4) : ''}
       <div class="verdict-word">${band.label}</div>
       <div class="headline">${esc(a.headline || a.simple_summary)}</div>
       <div class="freq">
@@ -696,7 +719,7 @@ function renderReview() {
         <div><b>${fmt(t.carbs_g)}g</b><span>carbs</span></div>
         <div><b>${fmt(t.fat_g)}g</b><span>fat</span></div>
       </div>
-      ${sourceSummary(a) ? `<p class="source-note">${sourceSummary(a).text}${a.engine === 'local' ? ' · typical serving' : a.data_sources.matched ? ' · portions estimated by AI' : ''}</p>` : ''}
+      ${sourceSummary(a) ? `<p class="source-note">${sourceSummary(a).text}${a.engine === 'local' ? ' · for a typical serving' : a.data_sources.matched ? ' · portions estimated by AI' : ''}</p>` : ''}
       ${pros.length || cons.length ? `<ul class="flags">
         ${pros.map((x) => `<li class="pro"><svg><use href="#i-check"/></svg><span>${esc(x)}</span></li>`).join('')}
         ${cons.map((x) => `<li class="con"><svg><use href="#i-alert"/></svg><span>${esc(x)}</span></li>`).join('')}
@@ -704,7 +727,7 @@ function renderReview() {
       ${a.best_for ? `<div class="best-for">⭐ Best for: ${esc(a.best_for)}</div>` : ''}
       ${a.overall_review ? `<div class="overall"><h4>Overall review</h4><p class="clamp">${esc(a.overall_review)}</p>
         <button type="button" class="read-more" aria-expanded="false">Read more</button></div>` : ''}
-      ${alternativesHtml(a, 3)}
+      ${a.confidence === 'high' ? alternativesHtml(a, 3) : ''}
     </div>
   </div>`;
   bindCorrections(box);

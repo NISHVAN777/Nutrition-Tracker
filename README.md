@@ -59,6 +59,7 @@ Works like an app: a camera button in the tab bar, a section bar for the long re
 - Meals made of several parts are built from their parts, e.g. a thali = rice + dal + roti + vegetable curry + curd
 
 **The report**
+- **Simple view by default:** the dish, how sure the model is, calories, a 1–10 score, how often to eat it, and the main good and bad points. **"Show all nutrition details"** opens everything below, and the app remembers your choice
 - **Health score (1–10)** from the Nutri-Score method, adjusted for portion, frying, salt, sugar and rich or creamy dishes, with "What's good" and "Watch out" reasons
 - **At a glance** card: a one-line verdict, how often to eat it (Rarely → Daily), what it's best for, and an overall review
 - Possible allergens, diet tags (vegan, vegetarian, high-protein…) and 3 tips to make the meal healthier
